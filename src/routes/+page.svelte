@@ -35,7 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     color: white;
     padding-top: 150px;
     padding-bottom: 150px;
-    background-image: url(static/Images/painting.JPG);
+    background-image: url(/Images/painting.JPG);
     background-attachment: fixed;
     background-size: 100%;
   }
@@ -317,7 +317,7 @@ position: fixed; /* or absolute */
   <div class="about">
     <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">About Me</h2>
     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    <img src="static/Images/Portfolio.png" alt="Austin" class="image">
+    <img src="/Images/Portfolio.png" alt="Austin" class="image">
     <br>
     <a class="button-blue" href="about.html">TELL ME MORE!</a>
   </div>
@@ -337,7 +337,7 @@ position: fixed; /* or absolute */
     <div class="progress-bar" style="width: 95%;">3d art: 95%</div>
     <div class="hide">
       I have skills in Animation, Texturing, Modeling, Animation, and more.
-      <img src="static/Images/arch.png" alt="Visualization" class="skill-images">
+      <img src="/Images/arch.png" alt="Visualization" class="skill-images">
     </div>
   </div>
   <div class="progress-bar-container">
