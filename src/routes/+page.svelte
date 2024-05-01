@@ -1,258 +1,403 @@
 <svelte:head>
     <title>Austin Tallent's Porfolio</title>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </svelte:head>
 
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin Tallent's Portfolio</title>
 <style>
-.photo{
-    background-image: url(Images/flower.jpg);
-    background-size: 100%;
-    background-position-y: 30%;
-    text-decoration: none;
-    background-attachment: fixed;
-    width: fit-content;
-    height: auto;
-    
+  :root {
+    --pale-blue-light: #c9d7f0;
+    --pale-blue-dark: #9fb8e5; 
+    --blue: #6186ff;
+    --blue-hover: #5778e6;
+    --text-blue: rgb(25, 26, 31);
+    --pale-purple-light: #ddc9f0;
+    --purple: #b061ff;
+    --purple-hover: #9e57e6;
+    --pale-purple-dark: #c29ee6;
+    --green: #61ffa5;
+    --green-hover: #57e695;
+    --pale-green-light: #d6ffe8;
+    --pale-green-dark: #c1e6d1;
+    --white-hover: #e6e6e6;
+    --scale: 1.25;
 }
-.header{
-    color: white;
-    text-align: left;
-    font-size: 80px;
-    padding-left: 19%;
-    padding-top: 90px;
-    padding-bottom: 30px;
-}
-.small-header{
-    color: white;
-    text-align: left;
-    font-size: 30px;
-    padding-left: 19%;
-    padding-right: 19%;
-    padding-bottom: 300px;
-}
-.about{
-    color: #131313;
-    background-color: white;
-    padding-left: 19%;
-    padding-top: 100px;
-    padding-right: 19%;
-    padding-bottom: 150px;
-    font-size: 30px;
-}
-.button{
+  body {
+    font-family: 'Arial', sans-serif;
     text-align: center;
+  }
+  .intro {
+    color: white;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(static/Images/painting.JPG);
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+  .button-blue{
+    display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 40px;
-    background-color: #333;
-    padding: 30px;
-}
-.button:hover {
-    color: #b1b1b1; /* Set the color for the link when hovered */
-    text-decoration: none; /* Remove underline on hover */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    background-color: #131313;
-}
-.nav{
-    padding: 30px;
-    background-color: #333;
-    text-align: right;
-}
-.nav-logo{
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+transition: all 0.5s ease;
+  }
+  .button-blue:hover{
+    color: var(--white-hover);
+    background-color: var(--blue-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .button-green{
+    display: inline-block;
     text-decoration: none;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15;
-    transform: 50%,0%;
     color: white;
+    background-color: var(--green);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+transition: all 0.5s ease;
+  }
+  .button-green:hover{
+    color: var(--white-hover);
+    background-color: var(--green-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .button-purple{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--purple);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+transition: all 0.5s ease;
+  }
+  .button-purple:hover{
+    color: var(--white-hover);
+    background-color: var(--purple-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .header{
+    background-color: var(--pale-blue-light);
+    padding: 30px;
+  }
+  .footer{
+    background-color: var(--pale-blue-light);
+    padding: 30px;
+    text-decoration: none;
+  }
+  .header-text{
+    display: inline-block;
+    color: var(--blue);
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+  }
+  .header-text:hover{
+    color: var(--blue-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .header-button{
+    display: inline-block;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.5s ease;
+  }
+  .header-button:hover{
+    color: var(--white-hover);
+    background-color: var(--blue-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1{
+    font-weight: normal;
+    font-size: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+  }
+  h2{
+    font-weight: normal;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+  p{
+    text-align: center;
     font-size: 15px;
-}
-.nav-logo:hover{
-    padding-left: 30px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+.about {  
+  position: relative;
+      background-color: var(--pale-blue-light);
+      color: var(--text-blue);
+
+
 }
 
-.nav-text{
-    text-decoration: none;
-    text-align: right;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 35px;
-    padding-right: 35px;
-    color: white;
-    font-size: 15px;
+.education{
+  background-color: var(--pale-purple-light);
+  padding-bottom: 50px;
 }
-.nav-text:hover {
-    color: #b1b1b1; /* Set the color for the link when hovered */
-    text-decoration: none; /* Remove underline on hover */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    background-color: #131313;
+.svg{
+  background-color: var(--pale-blue-light);
+  margin: 0;
+  padding: 0%;
+  transform: translateY(-20px);
 }
-
 .skills{
-    color: black;
-    background-color: white;
-    padding-top: 180px;
-    padding-left: 30px;
-    font-size: 30px;
-    width: 33%;
-    height: auto;
+  background-color: var(--pale-green-light);
 }
-
-.header-skills{
-    color: black;
-    text-align: left;
-    font-size: 80px;
-    padding-left: 19%;
-    padding-top: 300px;
-    padding-bottom: 30px;
-}
-
-
-.footer{
-    text-align: left;
-    color: white;
-    background-color: #333;
-    padding: 40px;
-    padding-left: 19%;
-    font-size: 11px;
-}
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    padding-left: 19%;
-    padding-right: 19%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color: #D8E4FF;
-}
-.skill {
-    display: flex;
-    align-items: center;
-}
-.skill img {
-    width: 100%;
-    height: auto;
-    text-align: left;
-}
-.skill-description {
-    flex: 1;
-    font-size: 30px;
-}
-.learn-more {
-    color: #ffffff;
-    padding: 10px 20px;
+.footer-text{
+  font-size: 20px;
+  color: var(--blue);
+  text-align: center;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    transition: all 0.5s ease;
+    transform: scale(1);
     text-decoration: none;
-    font-weight: bold;
-    background-color: #333;
 }
-.learn-more:hover {
-    text-decoration: none; /* Remove underline on hover */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    background-color: #131313;
+.footer-text:hover{
+    color: var(--blue-hover);
+    cursor: pointer;
+    transform: scale(var(--scale));
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
 }
-.white{
-    background-color: #D8E4FF;
+.copyright{
+  color: var(--blue);
+}
+.progress-container {
+    background-color: var(--pale-purple-dark); /* Set a background color for the container */
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px; /* Add some padding for spacing */
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 50%;
+    border-radius: 30px;
+}
+.progress-bar{
+    background-color: var(--purple); /* Set the color of the progress bar */
+    height: 24px; /* Set the height of the progress bar */
+    line-height: 24px; /* Vertically center the text inside the bar */
+    color: #ffffff; 
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    visibility: visible;
+    opacity: 1;
+  cursor: pointer;
+transition: all 0.5s ease;
+}
+.progress-bar:hover{
+  transform: scale(var(--scale));
+  background-color: var(--purple-hover);
+}
+.progress-bar:hover + .hide {
+    background-color: #8d4ecc; /* Set the color of the progress bar */
+    line-height: 24px; /* Vertically center the text inside the bar */
+    color: white; /* Text color */
+    border-radius: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    visibility: visible;
+    opacity: 1;
+  cursor: pointer;
+transition: all 0.5s ease;
+position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+  
+}
+.progress-bar-container {
+    background-color: var(--purple-hover); /* Set the color of the progress bar */
+    height: 24px; /* Set the height of the progress bar */
+    line-height: 24px; /* Vertically center the text inside the bar */
+    text-align: center; /* Center the label text */
+    color: #ffffff; /* Text color */
+    border-radius: 30px;
+}
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--pale-green-dark);
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 30px;
+  text-align: center;
+  position: relative; /* Change this to relative */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-height: 75%;
+  max-width: 50%;
+}
+.image{
+  width: 25%;
+  height: auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--pale-blue-dark);
+}
+.skill-images{
+  max-width: 85%;
+  height: auto;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--purple-hover);
+  margin-top: 15px;
 }
 </style>
+<body>
+    <header class="header">
+        <a class="header-text">ABOUT</a>
+        <a class="header-text">SKILLS</a>
+        <a class="header-text">PORTFOLIO</a>
+        <a class="header-text">PROJECTS</a>
+        <a class="header-button">CONTACT</a>
+    </header>
+  <div class="intro">
+    <h1>Hi, I'm Austin Tallent</h1>
+    <h2>Artist, CG Geek, and UI Designer</h2>
+    <a href="about.html" class="button-blue">DOWNLOAD RESUME</a>
+  </div>
+  <div class="about">
+    <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">About Me</h2>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <img src="static/Images/Portfolio.png" alt="Austin" class="image">
+    <br>
+    <a class="button-blue" href="about.html">TELL ME MORE!</a>
+  </div>
+  <div class="education">
+    <!--<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg' class="svg">
+      <path d='M0 22L33 19C82 13 133 14 20 29C267 44 333 67 400 70C467 74 533 59 600 40C667 22 733 0 800 0C867 0 933 22 1000 29C1067 37 1133 29 1167 26L1200 22V134H1167C1133 134 1067 134 1000 134C933 134 867 134 800 134C733 134 667 134 600 134C533 134 467 134 400 134C333 134 267 134 200 134C133 134 67 134 33 134H0V22.332Z' fill='#ddc9f0'/>
+    </svg>-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" fill="none" class="svg">
+      <path fill="#ddc9f0" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,181.3C384,192,480,160,576,176C672,192,768,256,864,272C960,288,1056,256,1152,250.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <h2 style="background-color: var(--pale-purple-light);">SKILLS</h2>
 
 
-
-
-
-
-<div class="nav">
-    <a class="nav-text" , href="about.html">ABOUT</a>
-    <a class="nav-text" , href="gallery.html">GALLERY</a>
-    <a class="nav-text" , href="my-process.html">MY PROCESS</a>
-    <a class="nav-text" , href="contact.html">CONTACT</a>
+    <p>I am skilled in many areas and different software. Some of them are listed below.</p>
+<div class="progress-container">
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 95%;">3d art: 95%</div>
+    <div class="hide">
+      I have skills in Animation, Texturing, Modeling, Animation, and more.
+      <img src="static/Images/arch.png" alt="Visualization" class="skill-images">
+    </div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 75%;">painting: 75%</div>
+    <div class="hide">I am skilled in painting using both oils and acrylics, and even digitally!</div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 90%;">drawing: 90%</div>
+    <div class="hide">I draw with colored pencils, regular pencils, and graphite.</div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 65%;">vector graphics: 65%</div>
+    <div class="hide">I create vector graphics, and enjoy the process.</div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 95%;">ui design: 80%</div>
+    <div class="hide">I use HTML and CSS to create stunning website designs.</div>
+  </div>
 </div>
-
-<div class="photo">
-    <div class="header">
-        Hi, I'm Austin Tallent!
+<div class="progress-container">
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 95%;">
+      Blender: 95%
     </div>
-    <div class="small-header">
-        I'm 15 years old and I'm a passonate artist with skills in painting, drawing, animation, vector art and
-        more!
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 85%;">
+      Inkscape: 85%
     </div>
-    <div class="about">
-        Hi there!
-        <br>
-        I'm Austin Tallent, a passionate artist, painter, photographer, animator, and CG Geek based in the dry city
-        of Richland, Washington. With a background in
-        art, I've honed my expertise in painting and 3D art. Here's a glimpse into my journey:
-        <br>
-        My journey has taken me through many art related experiences. Whether it's
-        recreating my house in 3D, capuring a moment of beauty with a camera, leading the production of a feature
-        length movie, or painting with oils, I thrive in anything art related (Except Modern Art).
-
-        Looking ahead, I'm excited about honing my skills in many ways. Whether it's improving my paintings or
-        creating the next big movie, I'm
-        committed to self improvment.
-        <br>
-        <br>
-        <br>
-        <br>
-        <a class="button" , href="about.html">TELL ME MORE!</a>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 77%;">
+      krita: 77%
     </div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 49%;">
+      gimp: 49%
+    </div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 53%;">
+      html & css: 53%
+    </div>
+  </div>
 </div>
-<!-- </div> -->
-<div class="white">
-    <a class="header-skills">SKILLS</a>
-    <div class="container">
-        <div class="skill">
-            <div class="skill-description">
-
-                <h2>PAINTING</h2>
-                <img src="Images/painter.jpg" alt="Painting">
-                <p>I am skilled in painting, both in oils and acrylics. I mostly paint landscapes, still lives, and
-                    portraits.</p>
-                <a href="#" class="learn-more">LEARN MORE!</a>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-description">
-
-                <h2>DRAWING</h2>
-                <img src="Images/drawing.jpg" alt="Drawing">
-                <p>I enjoy drawing with pencils, graphite, or pens. I especially enjoy drawing architecture, nature,
-                    or other objects.</p>
-                <a href="#" class="learn-more">LEARN MORE!</a>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-description">
-
-                <h2>BLENDER 3D</h2>
-                <img src="Images/blender.jpeg" alt="Blender">
-                <p>I love Blender. I use Blender for many of my projects, and am skilled in 3D modeling, texturing,
-                    environment creation, lighting, compositing, video editing, and am getting better at animation.
-                </p>
-                <a href="#" class="learn-more">LEARN MORE!</a>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-description">
-
-                <h2>DIGITAL & VECTOR ART</h2>
-                <img src="Images/krita.jpg" alt="Blender">
-                <p>I enjoy drawing with pencils, graphite, or pens. I especially enjoy drawing architecture,
-                    nature,
-                    or other objects.</p>
-                <a href="#" class="learn-more">LEARN MORE!</a>
-            </div>
-        </div>
-    </div>
+    <a class="button-purple" href="skills.html">MORE INFO</a>
 </div>
-<!-- </div> -->
-<footer class="footer">
-    &copy; Austin Tallent 2024 All Rights Reserved
-</footer>
+  <div class="skills">
+    <h2 style="background-color: var(--pale-green-dark);">projects</h2>
+    <a class="button-green" href="skills.html">ALL PROJECTS</a>
+</div>
+      <footer class="footer">
+        <a class="copyright">&copy 2024 Austin Tallent All Rights Reserved</a>
+        <br>
+        <div class="footer-text">
+        <i class="fa-brands fa-artstation" href="https://www.artstation.com/austin_tallent"></i>
+        </div>
+        <div class="footer-text">
+        <i class="fa-solid fa-envelope"></i>
+        </div>
+      </footer>
+</body>
