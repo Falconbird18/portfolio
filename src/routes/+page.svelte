@@ -2,9 +2,25 @@
     <title>Austin Tallent's Porfolio</title>
 <link rel="stylesheet" 
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </svelte:head>
 
+<script>
 
+import Skills from "/home/austin/Documents/portfolio/src/lib/Skills.svelte";
+let blender = {
+  buttonText: '3D ART 95%',
+  closeButtonText: 'close',
+  popupText: 'I am skilled in Blender',
+  width: '95%'
+};
+let painting = {
+  buttonText: 'PAINTING 75%',
+  closeButtonText: 'close',
+  popupText: 'I am skilled in painting',
+  width: '75%'
+};
+</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     --pale-green-dark: #c1e6d1;
     --white-hover: #e6e6e6;
     --scale: 1.25;
+    --time: 0.5s;
 }
   body {
     font-family: 'Arial', sans-serif;
@@ -48,7 +65,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     border-radius: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
-transition: all 0.5s ease;
+transition: all var(--time) ease;
   }
   .button-blue:hover{
     color: var(--white-hover);
@@ -67,7 +84,7 @@ transition: all 0.5s ease;
     border-radius: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
-transition: all 0.5s ease;
+transition: all var(--time) ease;
   }
   .button-green:hover{
     color: var(--white-hover);
@@ -86,7 +103,7 @@ transition: all 0.5s ease;
     border-radius: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
-transition: all 0.5s ease;
+transition: all var(--time) ease;
   }
   .button-purple:hover{
     color: var(--white-hover);
@@ -113,7 +130,7 @@ transition: all 0.5s ease;
     padding-right: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
-    transition: all 0.5s ease;
+    transition: all var(--time) ease;
     transform: scale(1);
   }
   .header-text:hover{
@@ -132,7 +149,7 @@ transition: all 0.5s ease;
     padding-right: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: all 0.5s ease;
+    transition: all var(--time) ease;
   }
   .header-button:hover{
     color: var(--white-hover);
@@ -194,7 +211,7 @@ transition: all 0.5s ease;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 0px;
-    transition: all 0.5s ease;
+    transition: all var(--time) ease;
     transform: scale(1);
     text-decoration: none;
 }
@@ -230,7 +247,7 @@ transition: all 0.5s ease;
     visibility: visible;
     opacity: 1;
   cursor: pointer;
-transition: all 0.5s ease;
+transition: all var(--time) ease;
     border: none;
 }
 .progress-bar:hover{
@@ -249,7 +266,7 @@ transition: all 0.5s ease;
     visibility: visible;
     opacity: 1;
   cursor: pointer;
-transition: all 0.5s ease;
+transition: all var(--time) ease;
 position: fixed; /* or absolute */
   top: 50%;
   left: 50%;
@@ -304,12 +321,12 @@ position: fixed; /* or absolute */
 .hidden {
   display: none;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all var(--time) ease;
 }
-#large-view {
+#blender-view {
   width: 100%;
   background-color: #8d4ecc;
-  transition: all 0.5s ease;
+  transition: all var(--time) ease;
   opacity: 1;
   text-align: center;
   transform: translate(0px,-100px);
@@ -322,6 +339,21 @@ position: fixed; /* or absolute */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+#painting-view {
+  width: 100%;
+  background-color: #8d4ecc;
+  transition: all var(--time) ease;
+  opacity: 1;
+  text-align: center;
+  transform: translate(0px,-100px);
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0 auto;
+  transform: translateX(-5%);
+  position: relative;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 /*#overlay {
   position: fixed;
   top: 0;
@@ -329,10 +361,15 @@ position: fixed; /* or absolute */
   width: 100%;
   height: 100%;
   filter: blur(0px);
-  transition: filter 0.5s ease;
+  transition: filter var(--time) ease;
   overflow-y: scroll;
 }*/
-
+.close-text{
+  font-size: 11px !important;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
 </style>
 <body>
     <div id="overlay">
@@ -368,10 +405,28 @@ position: fixed; /* or absolute */
     <p>I am skilled in many areas and different software. Some of them are listed below.</p>
     <div class="progress-container">
         <div class="progress-bar-container">
-          <button id="showButton" class="progress-bar" style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button>
-      <div id="large-view" class="hidden">
-        I have many skills!
+          <button id="blender" class="progress-bar" style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button>
+      <div id="blender-view" class="hidden">
+      I have skills in Animation, Texturing, Modeling, Animation, and more.
         <img src="/Images/arch.png" alt="Visualization" class="skill-images">
+        <div class="close-text">
+        <i class="fa-solid fa-arrow-turn-down fa-bounce" style="margin-right: 30px; font-size:14px;"></i>
+        Psst! Click anywhere outside this box to make it disappear!
+        <i class="fa-solid fa-arrow-turn-down fa-bounce" style="margin-left: 30px; font-size:14px;"></i>
+        </div>
+      </div> 
+        </div>
+
+        <div class="progress-bar-container">
+          <button id="painting" class="progress-bar" style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button>
+      <div id="painting-view" class="hidden">
+      I have skills in Animation, Texturing, Modeling, Animation, and more.
+        <img src="/Images/arch.png" alt="Visualization" class="skill-images">
+        <div class="close-text">
+        <i class="fa-solid fa-arrow-turn-down fa-bounce" style="margin-right: 30px; font-size:14px;"></i>
+        Psst! Click anywhere outside this box to make it disappear!
+        <i class="fa-solid fa-arrow-turn-down fa-bounce" style="margin-left: 30px; font-size:14px;"></i>
+        </div>
       </div> 
         </div>
       </div>
@@ -434,6 +489,15 @@ position: fixed; /* or absolute */
     <a class="button-green" href="skills.html">ALL PROJECTS</a>
 </div>
                         </div>
+
+      <div class="progress-container">
+
+      <Skills {...blender}/>
+
+      <Skills {...painting}/>
+      <Skills width="90%" buttonText="Drawing: 90%" closeButtonText="Close" popupText="Popup"/>
+      </div>
+
       <footer class="footer">
         <a class="copyright">&copy 2024 Austin Tallent All Rights Reserved</a>
         <br>
@@ -444,78 +508,4 @@ position: fixed; /* or absolute */
         <i class="fa-solid fa-envelope"></i>
         </div>
       </footer>
-
-<script>
-
-// Get the button and the rectangle element
-var button = document.getElementById('showButton');
-var rectangle = document.getElementById('large-view');
-var overlay = document.getElementById('overlay');
-/*
-// Function to toggle the visibility of the rectangle and the overlay
-function toggleRectangle() {
-  // Check if the rectangle is hidden
-  if (rectangle.classList.contains('hidden')) {
-    rectangle.classList.remove('hidden');
-    overlay.classList.add('show'); // Show the overlay
-    // Wait for the next browser repaint to ensure the class change has taken effect
-    window.requestAnimationFrame(function() {
-      rectangle.style.opacity = '1';
-    });
-  } else {
-    rectangle.style.opacity = '0';
-    overlay.classList.remove('show'); // Hide the overlay
-    // Wait for the transition to finish before hiding the element
-    rectangle.addEventListener('transitionend', function hideElement() {
-      rectangle.classList.add('hidden');
-      rectangle.removeEventListener('transitionend', hideElement);
-    });
-  }
-}
-*/
-/*function toggleRectangle() {
-  if (rectangle.classList.contains('hidden')) {
-    rectangle.classList.remove('hidden');
-    overlay.classList.add('show');
-    overlay.style.filter = 'blur(8px)';
-  } else {
-    rectangle.style.opacity = '0';
-    overlay.classList.remove('show');
-    overlay.style.filter = 'blur(0px)';
-    // Wait for the transition to finish before hiding the element
-    rectangle.addEventListener('transitionend', function hideElement() {
-      rectangle.classList.add('hidden');
-      rectangle.removeEventListener('transitionend', hideElement);
-    });
-  }
-}*/
-
-function toggleRectangle() {
-  if (rectangle.classList.contains('hidden')) {
-    rectangle.classList.remove('hidden');
-    //overlay.style.filter = 'blur(8px)'
-    window.requestAnimationFrame(function() {
-      rectangle.style.opacity = '1';
-    });
-  } else {
-    rectangle.style.opacity = '0';
-    //overlay.style.filter = 'blur(0px)'
-    rectangle.addEventListener('transitionend', function hideElement() {
-      rectangle.classList.add('hidden');
-      rectangle.removeEventListener('transitionend', hideElement);
-    });
-  }
-}
-
-// Add click event listener to the button to show the rectangle
-button.addEventListener('click', toggleRectangle);
-// Add click event listener to the document to hide the rectangle
-document.addEventListener('click', function(event) {
-  if (!rectangle.classList.contains('hidden') && event.target !== button) {
-    toggleRectangle();
-  }
-});
-
-
-</script>
 </body>
