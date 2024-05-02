@@ -226,15 +226,15 @@ transition: all 0.5s ease;
     color: #ffffff; 
     border-radius: 30px;
     text-transform: uppercase;
-    margin-top: 30px;
     margin-bottom: 30px;
     visibility: visible;
     opacity: 1;
   cursor: pointer;
 transition: all 0.5s ease;
+    border: none;
 }
 .progress-bar:hover{
-  transform: scale(var(--scale));
+  transform: scale(var(--scale)) !important;
   background-color: var(--purple-hover);
 }
 .progress-bar:hover + .hide {
@@ -265,6 +265,7 @@ position: fixed; /* or absolute */
     text-align: center; /* Center the label text */
     color: #ffffff; /* Text color */
     border-radius: 30px;
+    margin-top: 30px;
 }
 .hide {
   visibility: hidden;
@@ -300,8 +301,41 @@ position: fixed; /* or absolute */
   background-color: var(--purple-hover);
   margin-top: 15px;
 }
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#large-view {
+  width: 100%;
+  background-color: #8d4ecc;
+  transition: all 0.5s ease;
+  opacity: 1;
+  text-align: center;
+  transform: translate(0px,-100px);
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0 auto;
+  transform: translateX(-5%);
+  position: relative;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/*#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  transition: filter 0.5s ease;
+  overflow-y: scroll;
+}*/
+
 </style>
 <body>
+    <div id="overlay">
     <header class="header">
         <a class="header-text">ABOUT</a>
         <a class="header-text">SKILLS</a>
@@ -321,6 +355,7 @@ position: fixed; /* or absolute */
     <br>
     <a class="button-blue" href="about.html">TELL ME MORE!</a>
   </div>
+
   <div class="education">
     <!--<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg' class="svg">
       <path d='M0 22L33 19C82 13 133 14 20 29C267 44 333 67 400 70C467 74 533 59 600 40C667 22 733 0 800 0C867 0 933 22 1000 29C1067 37 1133 29 1167 26L1200 22V134H1167C1133 134 1067 134 1000 134C933 134 867 134 800 134C733 134 667 134 600 134C533 134 467 134 400 134C333 134 267 134 200 134C133 134 67 134 33 134H0V22.332Z' fill='#ddc9f0'/>
@@ -330,9 +365,16 @@ position: fixed; /* or absolute */
     </svg>
     <h2 style="background-color: var(--pale-purple-light);">SKILLS</h2>
 
-
     <p>I am skilled in many areas and different software. Some of them are listed below.</p>
-
+    <div class="progress-container">
+        <div class="progress-bar-container">
+          <button id="showButton" class="progress-bar" style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button>
+      <div id="large-view" class="hidden">
+        I have many skills!
+        <img src="/Images/arch.png" alt="Visualization" class="skill-images">
+      </div> 
+        </div>
+      </div>
 <div class="progress-container">
   <div class="progress-bar-container">
     <div class="progress-bar" style="width: 95%;">3d art: 95%</div>
@@ -391,6 +433,7 @@ position: fixed; /* or absolute */
     <h2 style="background-color: var(--pale-green-dark);">projects</h2>
     <a class="button-green" href="skills.html">ALL PROJECTS</a>
 </div>
+                        </div>
       <footer class="footer">
         <a class="copyright">&copy 2024 Austin Tallent All Rights Reserved</a>
         <br>
@@ -401,4 +444,78 @@ position: fixed; /* or absolute */
         <i class="fa-solid fa-envelope"></i>
         </div>
       </footer>
+
+<script>
+
+// Get the button and the rectangle element
+var button = document.getElementById('showButton');
+var rectangle = document.getElementById('large-view');
+var overlay = document.getElementById('overlay');
+/*
+// Function to toggle the visibility of the rectangle and the overlay
+function toggleRectangle() {
+  // Check if the rectangle is hidden
+  if (rectangle.classList.contains('hidden')) {
+    rectangle.classList.remove('hidden');
+    overlay.classList.add('show'); // Show the overlay
+    // Wait for the next browser repaint to ensure the class change has taken effect
+    window.requestAnimationFrame(function() {
+      rectangle.style.opacity = '1';
+    });
+  } else {
+    rectangle.style.opacity = '0';
+    overlay.classList.remove('show'); // Hide the overlay
+    // Wait for the transition to finish before hiding the element
+    rectangle.addEventListener('transitionend', function hideElement() {
+      rectangle.classList.add('hidden');
+      rectangle.removeEventListener('transitionend', hideElement);
+    });
+  }
+}
+*/
+/*function toggleRectangle() {
+  if (rectangle.classList.contains('hidden')) {
+    rectangle.classList.remove('hidden');
+    overlay.classList.add('show');
+    overlay.style.filter = 'blur(8px)';
+  } else {
+    rectangle.style.opacity = '0';
+    overlay.classList.remove('show');
+    overlay.style.filter = 'blur(0px)';
+    // Wait for the transition to finish before hiding the element
+    rectangle.addEventListener('transitionend', function hideElement() {
+      rectangle.classList.add('hidden');
+      rectangle.removeEventListener('transitionend', hideElement);
+    });
+  }
+}*/
+
+function toggleRectangle() {
+  if (rectangle.classList.contains('hidden')) {
+    rectangle.classList.remove('hidden');
+    //overlay.style.filter = 'blur(8px)'
+    window.requestAnimationFrame(function() {
+      rectangle.style.opacity = '1';
+    });
+  } else {
+    rectangle.style.opacity = '0';
+    //overlay.style.filter = 'blur(0px)'
+    rectangle.addEventListener('transitionend', function hideElement() {
+      rectangle.classList.add('hidden');
+      rectangle.removeEventListener('transitionend', hideElement);
+    });
+  }
+}
+
+// Add click event listener to the button to show the rectangle
+button.addEventListener('click', toggleRectangle);
+// Add click event listener to the document to hide the rectangle
+document.addEventListener('click', function(event) {
+  if (!rectangle.classList.contains('hidden') && event.target !== button) {
+    toggleRectangle();
+  }
+});
+
+
+</script>
 </body>
