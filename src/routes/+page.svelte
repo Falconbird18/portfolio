@@ -1,18 +1,6 @@
 <script>
   import Skills from "$lib/Skills.svelte";
   import Projects from "../lib/Projects.svelte";
-  let blender = {
-    buttonText: "3D ART 95%",
-    closeButtonText: "close",
-    popupText: "I am skilled in Blender",
-    width: "95%",
-  };
-  let painting = {
-    buttonText: "PAINTING 75%",
-    closeButtonText: "close",
-    popupText: "I am skilled in painting",
-    width: "75%",
-  };
 </script>
 
 <svelte:head>
@@ -82,155 +70,45 @@
         listed below.
       </p>
       <div class="progress-container">
-        <div class="progress-bar-container">
-          <button
-            id="blender"
-            class="progress-bar"
-            style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button
-          >
-          <div id="blender-view" class="hidden">
-            I have skills in Animation, Texturing, Modeling, Animation, and
-            more.
-            <img
-              src="/Images/arch.png"
-              alt="Visualization"
-              class="skill-images"
-            />
-            <div class="close-text">
-              <i
-                class="fa-solid fa-arrow-turn-down fa-bounce"
-                style="margin-right: 30px; font-size:14px;"
-              ></i>
-              Psst! Click anywhere outside this box to make it disappear!
-              <i
-                class="fa-solid fa-arrow-turn-down fa-bounce"
-                style="margin-left: 30px; font-size:14px;"
-              ></i>
-            </div>
-          </div>
-        </div>
+        <Skills
+          buttonText="3D ART 95%"
+          closeButtonText="close"
+          popupText="I am skilled in Blender"
+          width="95%"
+        />
 
-        <div class="progress-bar-container">
-          <button
-            id="painting"
-            class="progress-bar"
-            style="width:95%; transform:translateX(-2.5%)">3D ART: 95%</button
-          >
-          <div id="painting-view" class="hidden">
-            I have skills in Animation, Texturing, Modeling, Animation, and
-            more.
-            <img
-              src="/Images/arch.png"
-              alt="Visualization"
-              class="skill-images"
-            />
-            <div class="close-text">
-              <i
-                class="fa-solid fa-arrow-turn-down fa-bounce"
-                style="margin-right: 30px; font-size:14px;"
-              ></i>
-              Psst! Click anywhere outside this box to make it disappear!
-              <i
-                class="fa-solid fa-arrow-turn-down fa-bounce"
-                style="margin-left: 30px; font-size:14px;"
-              ></i>
-            </div>
-          </div>
-        </div>
+        <Skills
+          buttonText="PAINTING 75%"
+          closeButtonText="close"
+          popupText="I am skilled in painting"
+          width="75%"
+        />
+
+        <Skills
+          width="90%"
+          buttonText="Drawing: 90%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
       </div>
-      <div class="progress-container">
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 95%;">3d art: 95%</div>
-          <div class="hide">
-            I have skills in Animation, Texturing, Modeling, Animation, and
-            more.
-            <img
-              src="/Images/arch.png"
-              alt="Visualization"
-              class="skill-images"
-            />
-          </div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 75%;">painting: 75%</div>
-          <div class="hide">
-            I am skilled in painting using both oils and acrylics, and even
-            digitally!
-          </div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 90%;">drawing: 90%</div>
-          <div class="hide">
-            I draw with colored pencils, regular pencils, and graphite.
-          </div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 65%;">
-            vector graphics: 65%
-          </div>
-          <div class="hide">
-            I create vector graphics, and enjoy the process.
-          </div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 95%;">ui design: 80%</div>
-          <div class="hide">
-            I use HTML and CSS to create stunning website designs.
-          </div>
-        </div>
-      </div>
-      <div class="progress-container">
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 95%;">Blender: 95%</div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 85%;">Inkscape: 85%</div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 77%;">krita: 77%</div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 49%;">gimp: 49%</div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 53%;">html & css: 53%</div>
-        </div>
-      </div>
-      <a class="button-purple" href="skills.html">MORE INFO</a>
-    </div>
-    <div class="skills">
-      <h2 style="background-color: var(--pale-green-dark);">projects</h2>
-      <a class="button-green" href="skills.html">ALL PROJECTS</a>
-    </div>
-  </div>
 
-  <div class="progress-container">
-    <Skills {...blender} />
-
-    <Skills {...painting} />
-    <Skills
-      width="90%"
-      buttonText="Drawing: 90%"
-      closeButtonText="Close"
-      popupText="Popup"
-    />
-  </div>
-
-  <Projects />
-  <footer class="footer">
-    <a class="copyright">&copy 2024 Austin Tallent All Rights Reserved</a>
-    <br />
-    <div class="footer-text">
-      <i
-        class="fa-brands fa-artstation"
-        href="https://www.artstation.com/austin_tallent"
-      ></i>
+      <Projects />
+      <footer class="footer">
+        <span class="copyright">&copy 2024 Austin Tallent All Rights Reserved</span>
+        <br />
+        <div class="footer-text">
+          <i
+            class="fa-brands fa-artstation"
+            href="https://www.artstation.com/austin_tallent"
+          ></i>
+        </div>
+        <div class="footer-text">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </footer>
     </div>
-    <div class="footer-text">
-      <i class="fa-solid fa-envelope"></i>
-    </div>
-  </footer>
-</body>
+  </div></body
+>
 
 <style>
   :root {
