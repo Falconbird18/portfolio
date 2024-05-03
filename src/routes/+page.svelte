@@ -47,7 +47,9 @@
         inventore veritatis et quasi architecto beatae vitae dicta sunt
         explicabo.
       </p>
+      <div class="image-container">
       <img src="/Images/test-portfolio.jpg" alt="Austin" class="image" />
+      </div>
       <br />
       <Button
         link="about.html"
@@ -105,7 +107,12 @@
         buttonText="more info"
         buttonColor="--purple"
       />
-      <Projects />
+      <Projects 
+      projectTitle="supper froggy"
+      projectDescription="supper froggy is a full length movie that I a working on."
+      imageSource="/Images/supper_froggy.png"
+      alt="Supper Froggy"
+      />
       <footer class="footer">
         <span class="copyright"
           >&copy 2024 Austin Tallent All Rights Reserved</span
@@ -273,14 +280,21 @@
     width: 50%;
     border-radius: var(--radius);
   }
-  .image {
+  .image-container {
     width: 25%;
     height: auto;
     text-align: center;
     padding: 30px;
     border-radius: var(--radius);
+    background-color: var(--pale-blue-dark);
+    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: var(--pale-blue-dark);
   }
+  .image{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: var(--radius);
+}
 </style>
