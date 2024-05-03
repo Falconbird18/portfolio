@@ -7,7 +7,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <script>
 
-import Skills from "/home/austin/Documents/portfolio/src/lib/Skills.svelte";
+import Skills from "$lib/Skills.svelte";
 let blender = {
   buttonText: '3D ART 95%',
   closeButtonText: 'close',
