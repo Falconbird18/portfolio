@@ -42,16 +42,17 @@
 {/if}
 
 <style>
-    .image-container{
+    .image-container {
         background-color: var(--pale-purple-light);
         border-radius: 30px;
         padding: 15px;
         width: auto;
     }
     .button-container {
-        background-color: var(--purple-hover);
-        border-radius: var(--radius);
+        background-color: var(--purple);
+        border-radius: 30px;
         margin-top: 30px;
+        filter: brightness(var(--hover-brightness));
     }
     .popup {
         position: fixed;
@@ -71,15 +72,15 @@
     }
 
     .popup-content {
-      background: var(--pale-purple-dark);
-      padding: 20px;
-      border-radius: var(--radius);
-      color: white;
+        background: var(--pale-purple-dark);
+        padding: 20px;
+        border-radius: 30px;
+        color: white;
     }
     .button {
         background-color: var(--purple);
         border: none;
-        border-radius: var(--radius);
+        border-radius: 30px;
         height: 24px;
         color: white;
         transition: all var(--time) ease;
@@ -87,15 +88,17 @@
         justify-content: center;
         font-size: 16px;
         line-height: 24px;
+        filter: unset;
+        z-index: 4;
     }
     .button:hover {
-        background-color: var(--purple-hover);
         transform: scale(var(--scale));
+        filter: brightness(var(--hover-brightness));
     }
     .close {
         background-color: var(--purple-hover);
         border: none;
-        border-radius: var(--radius);
+        border-radius: 30px;
         color: white;
         padding: 15px;
         text-transform: uppercase;

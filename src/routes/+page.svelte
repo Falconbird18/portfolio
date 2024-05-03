@@ -1,6 +1,7 @@
 <script>
   import Skills from "$lib/Skills.svelte";
-  import Projects from "../lib/Projects.svelte";
+  import Projects from "$lib/Projects.svelte";
+  import Button from "$lib/Button.svelte";
 </script>
 
 <svelte:head>
@@ -25,7 +26,11 @@
     <div class="intro">
       <h1>Hi, I'm Austin Tallent</h1>
       <h2>Artist, CG Geek, and UI Designer</h2>
-      <a href="about.html" class="button-blue">DOWNLOAD RESUME</a>
+      <Button
+        link="about.html"
+        buttonText="download resume"
+        buttonColor="--blue"
+      />
     </div>
     <div class="about">
       <h2
@@ -44,7 +49,11 @@
       </p>
       <img src="/Images/test-portfolio.jpg" alt="Austin" class="image" />
       <br />
-      <a class="button-blue" href="about.html">TELL ME MORE!</a>
+      <Button
+        link="about.html"
+        buttonText="tell me more!"
+        buttonColor="--blue"
+      />
     </div>
 
     <div class="education">
@@ -91,10 +100,16 @@
           popupText="Popup"
         />
       </div>
-
+      <Button
+        link="about.html"
+        buttonText="more info"
+        buttonColor="--purple"
+      />
       <Projects />
       <footer class="footer">
-        <span class="copyright">&copy 2024 Austin Tallent All Rights Reserved</span>
+        <span class="copyright"
+          >&copy 2024 Austin Tallent All Rights Reserved</span
+        >
         <br />
         <div class="footer-text">
           <i
@@ -115,20 +130,17 @@
     --pale-blue-light: #c9d7f0;
     --pale-blue-dark: #9fb8e5;
     --blue: #6186ff;
-    --blue-hover: #5778e6;
     --text-blue: rgb(25, 26, 31);
     --pale-purple-light: #ddc9f0;
     --purple: #b061ff;
-    --purple-hover: #9e57e6;
     --pale-purple-dark: #c29ee6;
     --green: #61ffa5;
-    --green-hover: #57e695;
     --pale-green-light: #d6ffe8;
     --pale-green-dark: #c1e6d1;
-    --white-hover: #e6e6e6;
     --scale: 1.25;
     --time: 0.5s;
     --radius: 30px;
+    --hover-brightness: 0.9;
   }
   body {
     font-family: "Arial", sans-serif;
@@ -141,63 +153,6 @@
     background-image: url(/Images/painting.jpg);
     background-attachment: fixed;
     background-size: 100%;
-  }
-  .button-blue {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: var(--blue);
-    padding: 15px;
-    border-radius: var(--radius);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: all var(--time) ease;
-  }
-  .button-blue:hover {
-    color: var(--white-hover);
-    background-color: var(--blue-hover);
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .button-green {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: var(--green);
-    padding: 15px;
-    border-radius: var(--radius);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: all var(--time) ease;
-  }
-  .button-green:hover {
-    color: var(--white-hover);
-    background-color: var(--green-hover);
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .button-purple {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: var(--purple);
-    padding: 15px;
-    border-radius: var(--radius);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: all var(--time) ease;
-  }
-  .button-purple:hover {
-    color: var(--white-hover);
-    background-color: var(--purple-hover);
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
   }
   .header {
     background-color: var(--pale-blue-light);
@@ -220,11 +175,11 @@
     transform: scale(1);
   }
   .header-text:hover {
-    color: var(--blue-hover);
     cursor: pointer;
     transform: scale(var(--scale));
     margin-left: 20px;
     margin-right: 20px;
+    filter: brightness(var(--hover-brightness));
   }
   .header-button {
     display: inline-block;
@@ -238,12 +193,11 @@
     transition: all var(--time) ease;
   }
   .header-button:hover {
-    color: var(--white-hover);
-    background-color: var(--blue-hover);
     cursor: pointer;
     transform: scale(var(--scale));
     margin-left: 20px;
     margin-right: 20px;
+    filter: brightness(var(--hover-brightness));
   }
   h1 {
     font-weight: normal;
@@ -319,71 +273,6 @@
     width: 50%;
     border-radius: var(--radius);
   }
-  .progress-bar {
-    background-color: var(--purple); /* Set the color of the progress bar */
-    height: 24px; /* Set the height of the progress bar */
-    line-height: 24px; /* Vertically center the text inside the bar */
-    color: #ffffff;
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
-    transition: all var(--time) ease;
-    border: none;
-  }
-  .progress-bar:hover {
-    transform: scale(var(--scale)) !important;
-    background-color: var(--purple-hover);
-  }
-  .progress-bar:hover + .hide {
-    background-color: #8d4ecc; /* Set the color of the progress bar */
-    line-height: 24px; /* Vertically center the text inside the bar */
-    color: white; /* Text color */
-    border-radius: var(--radius);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
-    transition: all var(--time) ease;
-    position: fixed; /* or absolute */
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
-  }
-  .progress-bar-container {
-    background-color: var(
-      --purple-hover
-    ); /* Set the color of the progress bar */
-    height: 24px; /* Set the height of the progress bar */
-    line-height: 24px; /* Vertically center the text inside the bar */
-    text-align: center; /* Center the label text */
-    color: #ffffff; /* Text color */
-    border-radius: var(--radius);
-    margin-top: 30px;
-  }
-  .hide {
-    visibility: hidden;
-    opacity: 0;
-    background-color: var(--pale-green-dark);
-    line-height: 24px;
-    color: #ffffff;
-    border-radius: var(--radius);
-    text-align: center;
-    position: relative; /* Change this to relative */
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    max-height: 75%;
-    max-width: 50%;
-  }
   .image {
     width: 25%;
     height: auto;
@@ -393,69 +282,5 @@
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: var(--pale-blue-dark);
-  }
-  .skill-images {
-    max-width: 85%;
-    height: auto;
-    padding: 30px;
-    border-radius: var(--radius);
-    background-color: var(--purple-hover);
-    margin-top: 15px;
-  }
-  .hidden {
-    display: none;
-    opacity: 0;
-    transition: all var(--time) ease;
-  }
-  #blender-view {
-    width: 100%;
-    background-color: #8d4ecc;
-    transition: all var(--time) ease;
-    opacity: 1;
-    text-align: center;
-    transform: translate(0px, -100px);
-    border-radius: var(--radius);
-    padding: 30px;
-    margin: 0 auto;
-    transform: translateX(-5%);
-    position: relative;
-    z-index: 3;
-    box-shadow:
-      rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-
-  #painting-view {
-    width: 100%;
-    background-color: #8d4ecc;
-    transition: all var(--time) ease;
-    opacity: 1;
-    text-align: center;
-    transform: translate(0px, -100px);
-    border-radius: var(--radius);
-    padding: 30px;
-    margin: 0 auto;
-    transform: translateX(-5%);
-    position: relative;
-    z-index: 3;
-    box-shadow:
-      rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  /*#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(0px);
-  transition: filter var(--time) ease;
-  overflow-y: scroll;
-}*/
-  .close-text {
-    font-size: 11px !important;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
   }
 </style>
