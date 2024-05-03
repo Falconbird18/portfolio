@@ -32,7 +32,7 @@
   <style>
     .button-container{
         background-color: var(--purple-hover);
-        border-radius: 30px;
+        border-radius: var(--radius);
         margin-top: 30px;
 
     }
@@ -49,19 +49,20 @@
       padding-left: 25%;
       padding-right: 25%;
       padding-top: 15%;
-      padding-bottom: 15%;
+      padding-bottom: 10%;
+      z-index: 5;
     }
   
     .popup-content {
       background: var(--pale-purple-dark);
       padding: 20px;
-      border-radius: 30px;
+      border-radius: var(--radius);
       color: white;
     }
     .button{
         background-color: var(--purple);
         border: none;
-        border-radius: 30px;
+        border-radius: var(--radius);
         height: 24px;
         color: white;
         transition: all var(--time) ease;
@@ -77,7 +78,7 @@
     .close{
         background-color: var(--purple-hover);
         border: none;
-        border-radius: 30px;
+        border-radius: var(--radius);
         color: white;
         padding: 15px;
         text-transform: uppercase;

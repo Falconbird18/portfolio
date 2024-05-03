@@ -8,6 +8,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <script>
 
 import Skills from "$lib/Skills.svelte";
+    import Projects from "../lib/Projects.svelte";
 let blender = {
   buttonText: '3D ART 95%',
   closeButtonText: 'close',
@@ -43,6 +44,7 @@ let painting = {
     --white-hover: #e6e6e6;
     --scale: 1.25;
     --time: 0.5s;
+    --radius: 30px;
 }
   body {
     font-family: 'Arial', sans-serif;
@@ -62,7 +64,7 @@ let painting = {
     color: white;
     background-color: var(--blue);
     padding: 15px;
-    border-radius: 30px;
+    border-radius: var(--radius);
     margin-top: 30px;
     margin-bottom: 30px;
 transition: all var(--time) ease;
@@ -81,7 +83,7 @@ transition: all var(--time) ease;
     color: white;
     background-color: var(--green);
     padding: 15px;
-    border-radius: 30px;
+    border-radius: var(--radius);
     margin-top: 30px;
     margin-bottom: 30px;
 transition: all var(--time) ease;
@@ -100,7 +102,7 @@ transition: all var(--time) ease;
     color: white;
     background-color: var(--purple);
     padding: 15px;
-    border-radius: 30px;
+    border-radius: var(--radius);
     margin-top: 30px;
     margin-bottom: 30px;
 transition: all var(--time) ease;
@@ -144,7 +146,7 @@ transition: all var(--time) ease;
     display: inline-block;
     color: white;
     background-color: var(--blue);
-    border-radius: 30px;
+    border-radius: var(--radius);
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
@@ -234,14 +236,14 @@ transition: all var(--time) ease;
     margin-bottom: 50px;
     padding: 15px;
     width: 50%;
-    border-radius: 30px;
+    border-radius: var(--radius);
 }
 .progress-bar{
     background-color: var(--purple); /* Set the color of the progress bar */
     height: 24px; /* Set the height of the progress bar */
     line-height: 24px; /* Vertically center the text inside the bar */
     color: #ffffff; 
-    border-radius: 30px;
+    border-radius: var(--radius);
     text-transform: uppercase;
     margin-bottom: 30px;
     visibility: visible;
@@ -258,7 +260,7 @@ transition: all var(--time) ease;
     background-color: #8d4ecc; /* Set the color of the progress bar */
     line-height: 24px; /* Vertically center the text inside the bar */
     color: white; /* Text color */
-    border-radius: 30px;
+    border-radius: var(--radius);
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 30px;
@@ -281,7 +283,7 @@ position: fixed; /* or absolute */
     line-height: 24px; /* Vertically center the text inside the bar */
     text-align: center; /* Center the label text */
     color: #ffffff; /* Text color */
-    border-radius: 30px;
+    border-radius: var(--radius);
     margin-top: 30px;
 }
 .hide {
@@ -290,7 +292,7 @@ position: fixed; /* or absolute */
   background-color: var(--pale-green-dark);
   line-height: 24px;
   color: #ffffff;
-  border-radius: 30px;
+  border-radius: var(--radius);
   text-align: center;
   position: relative; /* Change this to relative */
   padding-top: 60px;
@@ -305,7 +307,7 @@ position: fixed; /* or absolute */
   height: auto;
   text-align: center;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: var(--radius);
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: var(--pale-blue-dark);
@@ -314,7 +316,7 @@ position: fixed; /* or absolute */
   max-width: 85%;
   height: auto;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: var(--radius);
   background-color: var(--purple-hover);
   margin-top: 15px;
 }
@@ -330,7 +332,7 @@ position: fixed; /* or absolute */
   opacity: 1;
   text-align: center;
   transform: translate(0px,-100px);
-  border-radius: 30px;
+  border-radius: var(--radius);
   padding: 30px;
   margin: 0 auto;
   transform: translateX(-5%);
@@ -346,7 +348,7 @@ position: fixed; /* or absolute */
   opacity: 1;
   text-align: center;
   transform: translate(0px,-100px);
-  border-radius: 30px;
+  border-radius: var(--radius);
   padding: 30px;
   margin: 0 auto;
   transform: translateX(-5%);
@@ -498,6 +500,7 @@ position: fixed; /* or absolute */
       <Skills width="90%" buttonText="Drawing: 90%" closeButtonText="Close" popupText="Popup"/>
       </div>
 
+      <Projects />
       <footer class="footer">
         <a class="copyright">&copy 2024 Austin Tallent All Rights Reserved</a>
         <br>
