@@ -17,7 +17,7 @@
 <body>
   <div id="overlay">
     <header class="header">
-      <a class="header-text">ABOUT</a>
+      <a src="https://calvintallent.me" class="header-text">ABOUT</a>
       <a class="header-text">SKILLS</a>
       <a class="header-text">PORTFOLIO</a>
       <a class="header-text">PROJECTS</a>
@@ -27,7 +27,7 @@
       <h1>Hi, I'm Austin Tallent</h1>
       <h2>Artist, CG Geek, and UI Designer</h2>
       <Button
-        link="about.html"
+        link="https://calvintallent.me"
         buttonText="download resume"
         buttonColor="--blue"
       />
@@ -52,7 +52,7 @@
       </div>
       <br />
       <Button
-        link="about.html"
+        link="https://calvintallent.me"
         buttonText="tell me more!"
         buttonColor="--blue"
       />
@@ -103,7 +103,7 @@
         />
       </div>
       <Button
-        link="about.html"
+        link="https://calvintallent.me"
         buttonText="more info"
         buttonColor="--purple"
       />
