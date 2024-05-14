@@ -2,6 +2,7 @@
   import Skills from "$lib/Skills.svelte";
   import Projects from "$lib/Projects.svelte";
   import Button from "$lib/Button.svelte";
+    import ButtonImage from "../../lib/Button_Image.svelte";
 </script>
 
 <svelte:head>
@@ -17,102 +18,47 @@
 <body>
   <div id="overlay">
     <header class="header">
-      <a href="/about" class="header-text">ABOUT</a>
+      <a src="https://calvintallent.me" class="header-text">ABOUT</a>
       <a class="header-text">SKILLS</a>
       <a class="header-text">PORTFOLIO</a>
       <a class="header-text">PROJECTS</a>
       <a class="header-button">CONTACT</a>
     </header>
     <div class="intro">
-      <h1>Hi, I'm Austin Tallent</h1>
-      <h2>Artist, CG Geek, and UI Designer</h2>
-      <Button
-        link="https://calvintallent.me"
-        buttonText="download resume"
-        buttonColor="--blue"
-      />
+      <h1>ABOUT ME</h1>
+
     </div>
+
     <div class="about">
+
       <h2
-        style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;"
+        style="background-color: var(--pale-green-dark); border-radius: 0px 0px 30px 30px;"
       >
-        About Me
+      MY STORY
       </h2>
-      <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Sed ut perspi unde omnis iste natus error sit voluptatem accusantium
-        doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo
-        inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo.
-      </p>
+
+        <ButtonImage 
+          transform="-10px,320px"
+          text="I was born on April 25, 2008."
+          />
+        <ButtonImage
+        transform="-10px,320px"
+        text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
+        buttonImageSource="/Images/oils.svg"
+        />
       <div class="image-container">
-      <img src="/Images/test-portfolio.jpg" alt="Austin" class="image" />
+        <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
+
       </div>
+
       <br />
       <Button
         link="https://calvintallent.me"
-        buttonText="tell me more!"
-        buttonColor="--blue"
+        buttonText="CONTACT ME!"
+        buttonColor="--green"
       />
     </div>
 
-    <div class="education">
-      <!--<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg' class="svg">
-      <path d='M0 22L33 19C82 13 133 14 20 29C267 44 333 67 400 70C467 74 533 59 600 40C667 22 733 0 800 0C867 0 933 22 1000 29C1067 37 1133 29 1167 26L1200 22V134H1167C1133 134 1067 134 1000 134C933 134 867 134 800 134C733 134 667 134 600 134C533 134 467 134 400 134C333 134 267 134 200 134C133 134 67 134 33 134H0V22.332Z' fill='#ddc9f0'/>
-    </svg>-->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        fill="none"
-        class="svg"
-      >
-        <path
-          fill="#ddc9f0"
-          fill-opacity="1"
-          d="M0,64L48,90.7C96,117,192,171,288,181.3C384,192,480,160,576,176C672,192,768,256,864,272C960,288,1056,256,1152,250.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <h2 style="background-color: var(--pale-purple-light);">SKILLS</h2>
-
-      <p>
-        I am skilled in many areas and different software. Some of them are
-        listed below.
-      </p>
-      <div class="progress-container">
-        <Skills
-          buttonText="3D ART 95%"
-          closeButtonText="close"
-          popupText="I am skilled in Blender"
-          width="95%"
-        />
-
-        <Skills
-          buttonText="PAINTING 75%"
-          closeButtonText="close"
-          popupText="I am skilled in painting"
-          width="75%"
-        />
-
-        <Skills
-          width="90%"
-          buttonText="Drawing: 90%"
-          closeButtonText="Close"
-          popupText="Popup"
-        />
-      </div>
-      <Button
-        link="https://calvintallent.me"
-        buttonText="more info"
-        buttonColor="--purple"
-      />
-      <Projects 
-      projectTitle="supper froggy"
-      projectDescription="supper froggy is a full length movie that I a working on."
-      imageSource="/Images/supper_froggy.png"
-      alt="Supper Froggy"
-      />
       <footer class="footer">
         <span class="copyright"
           >&copy 2024 Austin Tallent All Rights Reserved</span
@@ -127,13 +73,16 @@
         <div class="footer-text">
           <i class="fa-solid fa-envelope"></i>
         </div>
+        <div class="copyright">
+Disclaimer: Austin Tallent is not responsible for any sudden bursts of joy, or increased heart rates triggered by visiting this website.
+        </div>
       </footer>
     </div>
-  </div></body
+</body
 >
 
 <style>
-  :root {
+    :root {
     --pale-blue-light: #c9d7f0;
     --pale-blue-dark: #9fb8e5;
     --blue: #6186ff;
@@ -156,8 +105,8 @@
   .intro {
     color: white;
     padding-top: 150px;
-    padding-bottom: 150px;
-    background-image: url(/Images/painting.jpg);
+    padding-bottom: 500px;
+    background-image: url(/Images/grapes.jpg);
     background-attachment: fixed;
     background-size: 100%;
   }
@@ -180,7 +129,6 @@
     padding-bottom: 0px;
     transition: all var(--time) ease;
     transform: scale(1);
-    text-decoration: none;
   }
   .header-text:hover {
     cursor: pointer;
@@ -222,28 +170,10 @@
     margin: 0px;
     text-transform: uppercase;
   }
-  p {
-    text-align: center;
-    font-size: 15px;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
   .about {
     position: relative;
-    background-color: var(--pale-blue-light);
+    background-color: var(--pale-green-light);
     color: var(--text-blue);
-  }
-
-  .education {
-    background-color: var(--pale-purple-light);
-    padding-bottom: 50px;
-  }
-  .svg {
-    background-color: var(--pale-blue-light);
-    margin: 0;
-    padding: 0%;
-    transform: translateY(-20px);
   }
   .footer-text {
     font-size: 20px;
@@ -269,33 +199,21 @@
   .copyright {
     color: var(--blue);
   }
-  .progress-container {
-    background-color: var(
-      --pale-purple-dark
-    ); /* Set a background color for the container */
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 50px; /* Add some padding for spacing */
-    margin-bottom: 50px;
-    padding: 15px;
-    width: 50%;
-    border-radius: var(--radius);
-  }
   .image-container {
-    width: 25%;
+    width: 75%;
     height: auto;
     text-align: center;
     padding: 30px;
     border-radius: var(--radius);
-    background-color: var(--pale-blue-dark);
+    background-color: var(--pale-green-dark);
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .image{
+  .image {
     width: 100%;
     height: auto;
     text-align: center;
     border-radius: var(--radius);
-}
+  }
 </style>
