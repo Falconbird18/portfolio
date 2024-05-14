@@ -3,11 +3,11 @@
     import Projects from "$lib/Projects.svelte";
     import Button from "$lib/Button.svelte";
     import Header from "$lib/Header.svelte";
-    import Footer from "$lib/Footer.svelte";
+    import Footer from "$lib/Footer.svelte"
   </script>
   
   <svelte:head>
-    <title>Contact Austin Tallent</title>
+    <title>Austin Tallent's Porfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -18,121 +18,31 @@
   </svelte:head>
   <body>
     <div id="overlay">
-      <header class="header">
-        <a href="/about" class="header-text">ABOUT</a>
-        <a class="header-text">SKILLS</a>
-        <a class="header-text">PORTFOLIO</a>
-        <a class="header-text">PROJECTS</a>
-        <a class="header-button">CONTACT</a>
-      </header>
+        <Header />
       <div class="intro">
-        <h1>Hi, I'm Austin Tallent</h1>
-        <h2>Artist, CG Geek, and UI Designer</h2>
-        <Button
-          link="https://calvintallent.me"
-          buttonText="download resume"
-          buttonColor="--blue"
-        />
+        <h1>Contact Me</h1>
+        <!--Use cat picture from the nine for the header background image.-->
       </div>
       <div class="about">
         <h2
           style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;"
         >
-          About Me
+          Contact Me
         </h2>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Sed ut perspi unde omnis iste natus error sit voluptatem accusantium
-          doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo
-          inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo.
+          You can contact me through email at austintallent1@gmail.com. I will try to respond as soon as possible.
+          <Button
+            link="mailto:austintallent1@gmail.com"/>
         </p>
-        <div class="image-container">
-        <img src="/Images/test-portfolio.jpg" alt="Austin" class="image" />
-        </div>
         <br />
         <Button
           link="https://calvintallent.me"
-          buttonText="tell me more!"
+          buttonText="Email me!"
           buttonColor="--blue"
         />
       </div>
-  
-      <div class="education">
-        <!--<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg' class="svg">
-        <path d='M0 22L33 19C82 13 133 14 20 29C267 44 333 67 400 70C467 74 533 59 600 40C667 22 733 0 800 0C867 0 933 22 1000 29C1067 37 1133 29 1167 26L1200 22V134H1167C1133 134 1067 134 1000 134C933 134 867 134 800 134C733 134 667 134 600 134C533 134 467 134 400 134C333 134 267 134 200 134C133 134 67 134 33 134H0V22.332Z' fill='#ddc9f0'/>
-      </svg>-->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          fill="none"
-          class="svg"
-        >
-          <path
-            fill="#ddc9f0"
-            fill-opacity="1"
-            d="M0,64L48,90.7C96,117,192,171,288,181.3C384,192,480,160,576,176C672,192,768,256,864,272C960,288,1056,256,1152,250.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-        <h2 style="background-color: var(--pale-purple-light);">SKILLS</h2>
-  
-        <p>
-          I am skilled in many areas and different software. Some of them are
-          listed below.
-        </p>
-        <div class="progress-container">
-          <Skills
-            buttonText="3D ART 95%"
-            closeButtonText="close"
-            popupText="I am skilled in Blender"
-            width="95%"
-          />
-  
-          <Skills
-            buttonText="PAINTING 75%"
-            closeButtonText="close"
-            popupText="I am skilled in painting"
-            width="75%"
-          />
-  
-          <Skills
-            width="90%"
-            buttonText="Drawing: 90%"
-            closeButtonText="Close"
-            popupText="Popup"
-          />
-        </div>
-        <Button
-          link="https://calvintallent.me"
-          buttonText="more info"
-          buttonColor="--purple"
-        />
-        <Projects 
-        projectTitle="supper froggy"
-        projectDescription="supper froggy is a full length movie that I a working on."
-        imageSource="/Images/supper_froggy.png"
-        alt="Supper Froggy"
-        />
-        <footer class="footer">
-          <span class="copyright"
-            >&copy 2024 Austin Tallent All Rights Reserved</span
-          >
-          <br />
-          <div class="footer-text">
-            <i
-              class="fa-brands fa-artstation"
-              href="https://www.artstation.com/austin_tallent"
-            ></i>
-          </div>
-          <div class="footer-text">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-        </footer>
-      </div>
-    </div></body
-  >
+      <Footer />
+    </body>
   
   <style>
     :root {
