@@ -2,6 +2,8 @@
   import Skills from "$lib/Skills.svelte";
   import Projects from "$lib/Projects.svelte";
   import Button from "$lib/Button.svelte";
+  import Header from "$lib/Header.svelte";
+  import Footer from "$lib/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -16,13 +18,7 @@
 </svelte:head>
 <body>
   <div id="overlay">
-    <header class="header">
-      <a href="/about" class="header-text">ABOUT</a>
-      <a class="header-text">SKILLS</a>
-      <a class="header-text">PORTFOLIO</a>
-      <a class="header-text">PROJECTS</a>
-      <a class="header-button">CONTACT</a>
-    </header>
+    <Header/>
     <div class="intro">
       <h1>Hi, I'm Austin Tallent</h1>
       <h2>Artist, CG Geek, and UI Designer</h2>
@@ -113,21 +109,7 @@
       imageSource="/Images/supper_froggy.png"
       alt="Supper Froggy"
       />
-      <footer class="footer">
-        <span class="copyright"
-          >&copy 2024 Austin Tallent All Rights Reserved</span
-        >
-        <br />
-        <div class="footer-text">
-          <i
-            class="fa-brands fa-artstation"
-            href="https://www.artstation.com/austin_tallent"
-          ></i>
-        </div>
-        <div class="footer-text">
-          <i class="fa-solid fa-envelope"></i>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </div></body
 >
