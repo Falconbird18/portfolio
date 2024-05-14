@@ -13,7 +13,6 @@
           <i class="fa-solid fa-envelope"></i>
         </div>
       </footer>
->
 
 <style>
   :root {

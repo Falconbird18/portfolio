@@ -2,7 +2,9 @@
   import Skills from "$lib/Skills.svelte";
   import Projects from "$lib/Projects.svelte";
   import Button from "$lib/Button.svelte";
-    import ButtonImage from "../../lib/Button_Image.svelte";
+  import ButtonImage from "../../lib/Button_Image.svelte";
+  import Header from "$lib/Header.svelte";
+  import Footer from "$lib/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -17,38 +19,29 @@
 </svelte:head>
 <body>
   <div id="overlay">
-    <header class="header">
-      <a src="https://calvintallent.me" class="header-text">ABOUT</a>
-      <a class="header-text">SKILLS</a>
-      <a class="header-text">PORTFOLIO</a>
-      <a class="header-text">PROJECTS</a>
-      <a class="header-button">CONTACT</a>
-    </header>
+    <Header />
     <div class="intro">
       <h1>ABOUT ME</h1>
-
     </div>
 
     <div class="about">
-
       <h2
         style="background-color: var(--pale-green-dark); border-radius: 0px 0px 30px 30px;"
       >
-      MY STORY
+        MY STORY
       </h2>
 
-        <ButtonImage 
-          transform="-10px,320px"
-          text="I was born on April 25, 2008."
-          />
-        <ButtonImage
+      <ButtonImage
+        transform="-10px,320px"
+        text="I was born on April 25, 2008."
+      />
+      <ButtonImage
         transform="-10px,320px"
         text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
         buttonImageSource="/Images/oils.svg"
-        />
+      />
       <div class="image-container">
         <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
-
       </div>
 
       <br />
@@ -58,31 +51,12 @@
         buttonColor="--green"
       />
     </div>
-
-      <footer class="footer">
-        <span class="copyright"
-          >&copy 2024 Austin Tallent All Rights Reserved</span
-        >
-        <br />
-        <div class="footer-text">
-          <i
-            class="fa-brands fa-artstation"
-            href="https://www.artstation.com/austin_tallent"
-          ></i>
-        </div>
-        <div class="footer-text">
-          <i class="fa-solid fa-envelope"></i>
-        </div>
-        <div class="copyright">
-Disclaimer: Austin Tallent is not responsible for any sudden bursts of joy, or increased heart rates triggered by visiting this website.
-        </div>
-      </footer>
-    </div>
-</body
+    <Footer />
+  </div></body
 >
 
 <style>
-    :root {
+  :root {
     --pale-blue-light: #c9d7f0;
     --pale-blue-dark: #9fb8e5;
     --blue: #6186ff;

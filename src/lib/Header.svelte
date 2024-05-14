@@ -3,7 +3,7 @@
     <a class="header-text">SKILLS</a>
     <a class="header-text">PORTFOLIO</a>
     <a class="header-text">PROJECTS</a>
-    <a class="header-button">CONTACT</a>
+    <a href="/contact" class="header-button">CONTACT</a>
 </header>
 
 <style>
@@ -56,6 +56,7 @@
       padding-top: 15px;
       padding-bottom: 15px;
       transition: all var(--time) ease;
+      text-decoration: none;
     }
     .header-button:hover {
       cursor: pointer;
