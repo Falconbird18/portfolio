@@ -1,8 +1,7 @@
 <header class="header">
     <a href="/about" class="header-text">ABOUT</a>
-    <a class="header-text">SKILLS</a>
-    <a class="header-text">PORTFOLIO</a>
-    <a class="header-text">PROJECTS</a>
+    <a href="/skills" class="header-text">SKILLS</a>
+    <a href="/portfolio" class="header-text">PORTFOLIO</a>
     <a href="/contact" class="header-button">CONTACT</a>
 </header>
 

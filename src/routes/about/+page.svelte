@@ -35,6 +35,18 @@
         transform="-10px,320px"
         text="I was born on April 25, 2008."
       />
+      
+      <ButtonImage
+        transform="-10,450"
+        text="In some year, I won the regonal VFW art contest for the first time."
+        />
+      <ButtonImage
+        transform="-20,340px"
+        text="In 2022, I started learning acrylics."
+        />
+      <ButtonImage
+        transform="-30,400px"
+        text="In some year, I won the regonal VFW art contest for the second time."
       <ButtonImage
         transform="-10px,320px"
         text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
@@ -46,7 +58,7 @@
 
       <br />
       <Button
-        link="https://calvintallent.me"
+        link="/contact"
         buttonText="CONTACT ME!"
         buttonColor="--green"
       />

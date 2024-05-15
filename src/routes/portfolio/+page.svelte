@@ -4,6 +4,8 @@
     import Button from "$lib/Button.svelte";
     import Header from "$lib/Header.svelte";
     import Footer from "$lib/Footer.svelte"
+    import { Tabs, TabList, Tab, TabPanel } from '@colorfuldots/svelteit'
+    import Image from "$lib/Gallery.svelte"
   </script>
   
   <svelte:head>
@@ -20,24 +22,51 @@
     <div id="overlay">
         <Header />
       <div class="intro">
-        <h1>Contact Me</h1>
+        <h1>Gallery</h1>
         <!--Use cat picture from the nine for the header background image.-->
       </div>
       <div class="about">
-        <h2
-          style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;"
-        >
-          Contact Me
-        </h2>
-        <p>
-          You can contact me through email at austintallent1@gmail.com. I will try to respond as soon as possible.
-        </p>
-        <br />
-        <Button
-          link="mailto:austintallent1@gmail.com"
-          buttonText="Email me!"
-          buttonColor="--blue"
-        />
+        <Tabs>
+          <Tab>Paintings</Tab>
+          <Tab>Blender</Tab>
+          <Tab>Projects</Tab>
+
+          <TabPanel>
+
+            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Paintings</h2>
+            These are my paintings.
+
+            <div class="gallery">
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+            </div>
+          </TabPanel>
+
+          <TabPanel>
+            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Blender</h2>
+            These are my Blender projects.
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+          </TabPanel>
+
+          <TabPanel>
+            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Projects</h2>
+             These are all my projects.
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+              <Image />
+          </TabPanel>
+        </Tabs>
       </div>
       <Footer />
     </body>
@@ -58,6 +87,9 @@
       --time: 0.5s;
       --radius: 30px;
       --hover-brightness: 0.9;
+    }
+    .gallery{
+      columns: 3;
     }
     body {
       font-family: "Arial", sans-serif;
