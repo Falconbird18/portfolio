@@ -48,7 +48,7 @@
       </div>
       <br />
       <Button
-        link="https://calvintallent.me"
+        link="/about"
         buttonText="tell me more!"
         buttonColor="--blue"
       />

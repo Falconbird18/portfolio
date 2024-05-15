@@ -31,12 +31,10 @@
         </h2>
         <p>
           You can contact me through email at austintallent1@gmail.com. I will try to respond as soon as possible.
-          <Button
-            link="mailto:austintallent1@gmail.com"/>
         </p>
         <br />
         <Button
-          link="https://calvintallent.me"
+          link="mailto:austintallent1@gmail.com"
           buttonText="Email me!"
           buttonColor="--blue"
         />
