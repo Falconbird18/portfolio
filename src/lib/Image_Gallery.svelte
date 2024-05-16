@@ -3,11 +3,11 @@
 
     export let closeButtonText = "Close";
     export let popupYear = "2008";
-    export let buttonImageSource = "/Images/marker.svg";
+    export let buttonImageSource = "/Images/born.svg";
     export let imageSource = "/Images/baby.svg";
     export let imageAlt = "Architecture";
     export let text = "Architecture";
-    export let MarkerText = "2024 Oil Paints";
+    export let transform = "0px,-150px";
 
     let isPopupVisible = false;
 
@@ -16,15 +16,10 @@
     }
 </script>
 
-<button
-    on:click={togglePopup}
-    class="button"
->
-    <div class="image">
-        <img src={buttonImageSource} alt={imageAlt} class="new-image"/>
-        <p class="marker-text">{MarkerText}</p>
-    </div>
-</button>
+    <button on:click={togglePopup} class="button" style="transform: translate({transform});">
+    <img src="{buttonImageSource}" alt="{imageAlt}" class="image">    
+    </button
+    >
 {#if isPopupVisible}
     <div class="popup" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
         <div
@@ -100,7 +95,7 @@
         background-color: var(--green-hover);
         transform: scale(var(--scale));
     }
-    .image {
+    .image{
         width: 10%;
         height: auto;
         transition: all var(--time) ease;
@@ -110,19 +105,8 @@
         transform: scale(var(--scale));
         filter: brightness(var(--hover-brightness));
     }
-    .new-image{
-        width: 100%;
-    }
-    .image-popup {
+    .image-popup{
         width: 75%;
         height: auto;
-    }
-    .marker-text {
-        font-size: 25px;
-        color: #5e666e;
-        transform: translate(40px, -160px);
-        z-index: 501;
-        max-width: 55%;
-        justify-content: center;
     }
 </style>

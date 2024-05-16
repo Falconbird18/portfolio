@@ -20,7 +20,7 @@
     <div id="overlay">
         <Header />
       <div class="intro">
-        <h1>Contact Me</h1>
+        <h1>CONTACT ME</h1>
         <!--Use cat picture from the nine for the header background image.-->
       </div>
       <div class="about">

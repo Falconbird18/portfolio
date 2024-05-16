@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Austin Tallent's Porfolio</title>
+  <title>Austin Tallent's Portfolio</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -30,38 +30,56 @@
       >
         MY STORY
       </h2>
-
-      <ButtonImage
-        transform="-10px,320px"
-        text="I was born on April 25, 2008."
-      />
-      
-      <ButtonImage
-        transform="-10,450"
-        text="In some year, I won the regonal VFW art contest for the first time."
-        />
-      <ButtonImage
-        transform="-20,340px"
-        text="In 2022, I started learning acrylics."
-        />
-      <ButtonImage
-        transform="-30,400px"
-        text="In some year, I won the regonal VFW art contest for the second time."
-      <ButtonImage
-        transform="-10px,320px"
-        text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
-        buttonImageSource="/Images/oils.svg"
-      />
       <div class="image-container">
+        <ButtonImage
+          style="transform:translate(-40px,30px)"
+          text="I was born on April 25, 2008."
+          MarkerText="2008 I was born"
+        />
         <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
-      </div>
 
-      <br />
-      <Button
-        link="/contact"
-        buttonText="CONTACT ME!"
-        buttonColor="--green"
+        <ButtonImage
+          transform="90px,-1770px"
+          text="I started using prismacolor pencils and produced my first actually good artwork in 2018."
+          MarkerText="2018 Pencils"
+        />
+        <ButtonImage
+          transform="-20,-10000px"
+          text="In 2019, I started learning Blender."
+          MarkerText="2019 Blender"
+        />
+        <ButtonImage
+          transform="-20,15540px"
+          text="In 2020, I started learning Inkscape"
+          MarkerText="2020 Inkscape"
+        />      <ButtonImage
+        transform="-20,15540px"
+        text="In 2021, I started learning acrylics."
+        MarkerText="2021 Acrylic Paints"
       />
+        <ButtonImage
+          transform="-30,-190px"
+          text="In 2023, I won the regional VFW art contest for the second time."
+          MarkerText="2023 VFW Art"
+        />
+        <ButtonImage
+          transform="-20px,-190px"
+          text="In September of 2023, I started learning web design using HTML and CSS"
+          MarkerText="2023 Web Design"
+        />
+        <ButtonImage
+          transform="-20,15540px"
+          text="In November of 2023, Blender 4.0 was released, and exciting improved version of Blender with many new and improved features!"
+          MarkerText="2023 Blender 4.0"
+        />
+        <ButtonImage
+          transform="-60px,-190px"
+          text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
+          MarkerText="2024 Oil Paints"
+        />
+      </div>
+      <br />
+      <Button link="/contact" buttonText="CONTACT ME!" buttonColor="--green" />
     </div>
     <Footer />
   </div></body
@@ -96,51 +114,6 @@
     background-attachment: fixed;
     background-size: 100%;
   }
-  .header {
-    background-color: var(--pale-blue-light);
-    padding: 30px;
-  }
-  .footer {
-    background-color: var(--pale-blue-light);
-    padding: 30px;
-    text-decoration: none;
-  }
-  .header-text {
-    display: inline-block;
-    color: var(--blue);
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    transition: all var(--time) ease;
-    transform: scale(1);
-  }
-  .header-text:hover {
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    filter: brightness(var(--hover-brightness));
-  }
-  .header-button {
-    display: inline-block;
-    color: white;
-    background-color: var(--blue);
-    border-radius: var(--radius);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    transition: all var(--time) ease;
-  }
-  .header-button:hover {
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    filter: brightness(var(--hover-brightness));
-  }
   h1 {
     font-weight: normal;
     font-size: 45px;
@@ -160,30 +133,6 @@
     position: relative;
     background-color: var(--pale-green-light);
     color: var(--text-blue);
-  }
-  .footer-text {
-    font-size: 20px;
-    color: var(--blue);
-    text-align: center;
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    transition: all var(--time) ease;
-    transform: scale(1);
-    text-decoration: none;
-  }
-  .footer-text:hover {
-    color: var(--blue-hover);
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: none;
-  }
-  .copyright {
-    color: var(--blue);
   }
   .image-container {
     width: 75%;

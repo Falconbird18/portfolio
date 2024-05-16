@@ -143,52 +143,6 @@
     background-attachment: fixed;
     background-size: 100%;
   }
-  .header {
-    background-color: var(--pale-blue-light);
-    padding: 30px;
-  }
-  .footer {
-    background-color: var(--pale-blue-light);
-    padding: 30px;
-    text-decoration: none;
-  }
-  .header-text {
-    display: inline-block;
-    color: var(--blue);
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    transition: all var(--time) ease;
-    transform: scale(1);
-    text-decoration: none;
-  }
-  .header-text:hover {
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    filter: brightness(var(--hover-brightness));
-  }
-  .header-button {
-    display: inline-block;
-    color: white;
-    background-color: var(--blue);
-    border-radius: var(--radius);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    transition: all var(--time) ease;
-  }
-  .header-button:hover {
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    filter: brightness(var(--hover-brightness));
-  }
   h1 {
     font-weight: normal;
     font-size: 45px;
@@ -226,30 +180,6 @@
     margin: 0;
     padding: 0%;
     transform: translateY(-20px);
-  }
-  .footer-text {
-    font-size: 20px;
-    color: var(--blue);
-    text-align: center;
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    transition: all var(--time) ease;
-    transform: scale(1);
-    text-decoration: none;
-  }
-  .footer-text:hover {
-    color: var(--blue-hover);
-    cursor: pointer;
-    transform: scale(var(--scale));
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: none;
-  }
-  .copyright {
-    color: var(--blue);
   }
   .progress-container {
     background-color: var(

@@ -1,115 +1,132 @@
 <script>
-    import { fade } from "svelte/transition";
+    let currentTab = "Paintings";
 
-    export let closeButtonText = "Close";
-    export let popupText = "Popup";
-    export let imageSource = "/Images/arch.png";
-    export let artworkTitle = "Architecture";
-
-    let isPopupVisible = false;
-
-    function togglePopup() {
-        isPopupVisible = !isPopupVisible;
+    function switchTab(tab) {
+        currentTab = tab;
     }
 </script>
 
-<div class="button-container">
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <img src="{imageSource}" alt="artworkTitle" on:click={togglePopup} class="button">
-    <p>{artworkTitle}</p>
+<div class="tabs">
+    <button class="tab-button" on:click={() => switchTab("Paintings")}>
+        Paintings
+    </button>
+    <button class="tab-button" on:click={() => switchTab("Blender")}>
+        Blender
+    </button>
+    <button class="tab-button" on:click={() => switchTab("Inkscape")}>
+        Inkscape
+    </button>
+    <button class="tab-button" on:click={() => switchTab("Ui")}>
+        Web design
+    </button>
+    <button class="tab-button" on:click={() => switchTab("Projects")}>
+        Projects
+    </button>
 </div>
-{#if isPopupVisible}
-    <div class="popup" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
-        <div
-            class="popup-content"
-            in:fade={{ duration: 300 }}
-            out:fade={{ duration: 300 }}
-        >
-            <p>{popupText}</p>
-            <div class="image-container">
-                <img src={imageSource} alt={imageAlt} class="image" />
+
+<div class="tab-content">
+    {#if currentTab === "Paintings"}
+        <div class="image-container">
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
             </div>
-            <br />
-            <p>title: {artworkTitle}</p>
-            <button on:click={togglePopup} class="close"
-                >{closeButtonText}</button
-            >
+            <div class="image-column">
+                <img src="/Images/arch.png" alt="Grapes" class="images" />
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/painting.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
         </div>
-    </div>
-{/if}
+    {:else if currentTab === "Blender"}
+        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+    {:else if currentTab === "Inkscape"}
+        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+    {:else if currentTab === "Ui"}
+        <div class="image-container">
+            <div class="image-column">
+                <img src="https://blog.hubspot.com/hs-fs/hubfs/telerik-homepage-update.png?t=1502725308401&width=1347&name=telerik-homepage-update.png" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="https://webneel.com/daily/sites/default/files/images/daily/02-2014/10-beautiful-websites.jpg" alt="Grapes" class="images" />
+                <img src="https://agentestudio.com/uploads/ckeditor/pictures/1731/18.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="https://www.founderjar.com/wp-content/uploads/2021/03/Best-Website-Designs.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="https://th.bing.com/th/id/OIP.Xj9koV7MUUqya0yqIJWkPgHaFk?rs=1&pid=ImgDetMain" alt="Grapes" class="images" />
+            </div>
+        </div>
+    {:else if currentTab === "Projects"}
+        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+    {/if}
+</div>
 
 <style>
-    .image-container {
-        background-color: var(--pale-purple-light);
-        border-radius: 30px;
-        padding: 15px;
-        width: auto;
-    }
-    .button-container {
-        background-color: var(--purple);
-        border-radius: 30px;
-        margin-top: 30px;
-        filter: brightness(var(--hover-brightness));
-    }
-    .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 50%;
-        background: rgba(0, 0, 0, 0.5);
+    .tabs {
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding-left: 25%;
-        padding-right: 25%;
-        padding-top: 15%;
-        padding-bottom: 15%;
-        z-index: 5;
+        margin-bottom: 20px;
     }
 
-    .popup-content {
-        background: var(--pale-purple-dark);
-        padding: 20px;
-        border-radius: 30px;
+    .tab-button {
+        display: inline-block;
         color: white;
-    }
-    .button {
-        background-color: var(--purple);
-        border: none;
-        border-radius: 30px;
-        height: 24px;
-        color: white;
+        background-color: var(--blue);
+        border-radius: var(--radius);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         transition: all var(--time) ease;
-        display: flex;
-        justify-content: center;
-        font-size: 16px;
-        line-height: 24px;
-        filter: unset;
-        z-index: 4;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: none;
     }
-    .button:hover {
+    .tab-button:hover {
+        cursor: pointer;
         transform: scale(var(--scale));
+        margin-left: 20px;
+        margin-right: 20px;
         filter: brightness(var(--hover-brightness));
     }
-    .close {
-        background-color: var(--purple-hover);
-        border: none;
-        border-radius: 30px;
-        color: white;
-        padding: 15px;
-        text-transform: uppercase;
-        transition: all var(--time) ease;
-    }
-    .close:hover {
-        background-color: var(--purple-hover);
+    .tab-button:active {
         transform: scale(var(--scale));
+        margin-left: 20px;
+        margin-right: 20px;
+        filter: brightness(var(--hover-brightness));
     }
-    .image {
+    .tab-content {
+        border: 1px solid #ccc;
+        padding: 16px;
+    }
+    .images {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        border-radius: var(--radius);
+    }
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         width: 75%;
-        height: auto;
-        padding: 20px;
-        border-radius: 30px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+    .image-column {
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+        margin-left: 1%;
+        margin-right: 1%;
+        gap: 10px;
     }
 </style>

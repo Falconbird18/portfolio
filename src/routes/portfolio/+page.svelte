@@ -4,12 +4,11 @@
     import Button from "$lib/Button.svelte";
     import Header from "$lib/Header.svelte";
     import Footer from "$lib/Footer.svelte"
-    import { Tabs, TabList, Tab, TabPanel } from '@colorfuldots/svelteit'
-    import Image from "$lib/Gallery.svelte"
+    import Gallery from "$lib/Gallery.svelte"
   </script>
   
   <svelte:head>
-    <title>Austin Tallent's Porfolio</title>
+    <title>Austin Tallent's Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,51 +21,11 @@
     <div id="overlay">
         <Header />
       <div class="intro">
-        <h1>Gallery</h1>
+        <h1>GALLERY</h1>
         <!--Use cat picture from the nine for the header background image.-->
       </div>
       <div class="about">
-        <Tabs>
-          <Tab>Paintings</Tab>
-          <Tab>Blender</Tab>
-          <Tab>Projects</Tab>
-
-          <TabPanel>
-
-            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Paintings</h2>
-            These are my paintings.
-
-            <div class="gallery">
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-            </div>
-          </TabPanel>
-
-          <TabPanel>
-            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Blender</h2>
-            These are my Blender projects.
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-          </TabPanel>
-
-          <TabPanel>
-            <h2 style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;">Projects</h2>
-             These are all my projects.
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-              <Image />
-          </TabPanel>
-        </Tabs>
+        <Gallery />
       </div>
       <Footer />
     </body>
@@ -87,9 +46,6 @@
       --time: 0.5s;
       --radius: 30px;
       --hover-brightness: 0.9;
-    }
-    .gallery{
-      columns: 3;
     }
     body {
       font-family: "Arial", sans-serif;
@@ -129,6 +85,7 @@
       position: relative;
       background-color: var(--pale-blue-light);
       color: var(--text-blue);
+      padding-top: 100px;
     }
   </style>
   
