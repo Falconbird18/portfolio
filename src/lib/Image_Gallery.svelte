@@ -3,11 +3,9 @@
 
     export let closeButtonText = "Close";
     export let popupYear = "2008";
-    export let buttonImageSource = "/Images/born.svg";
-    export let imageSource = "/Images/baby.svg";
+    export let ImageSource = "/Images/grapes.jpg";
     export let imageAlt = "Architecture";
     export let text = "Architecture";
-    export let transform = "0px,-150px";
 
     let isPopupVisible = false;
 
@@ -16,8 +14,8 @@
     }
 </script>
 
-    <button on:click={togglePopup} class="button" style="transform: translate({transform});">
-    <img src="{buttonImageSource}" alt="{imageAlt}" class="image">    
+    <button on:click={togglePopup} class="button">
+    <img src="{ImageSource}" alt="{imageAlt}" class="image">    
     </button
     >
 {#if isPopupVisible}
@@ -29,7 +27,7 @@
         >
             <p>{popupYear}</p>
             <div class="container">
-                <img src={imageSource} alt={imageAlt} class="image-popup" />
+                <img src={ImageSource} alt={imageAlt} class="image-popup" />
             </div>
             <br />
             <p>{text}</p>
@@ -61,7 +59,7 @@
         padding-right: 25%;
         padding-top: 15%;
         padding-bottom: 15%;
-        z-index: 5;
+        z-index: 501;
     }
 
     .popup-content {
@@ -76,7 +74,7 @@
         display: flex;
         justify-content: center;
         filter: unset;
-        width: 75%;
+        width: 100%;
     }
     .button:hover {
         transform: scale(var(--scale));
@@ -96,10 +94,11 @@
         transform: scale(var(--scale));
     }
     .image{
-        width: 10%;
+        width: 100%;
         height: auto;
         transition: all var(--time) ease;
         z-index: 500;
+        border-radius: var(--radius);
     }
     .image:hover {
         transform: scale(var(--scale));
@@ -107,6 +106,6 @@
     }
     .image-popup{
         width: 75%;
-        height: auto;
+        height: 75%;
     }
 </style>

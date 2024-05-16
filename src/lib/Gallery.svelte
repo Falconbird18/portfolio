@@ -1,4 +1,5 @@
 <script>
+    import ImageGallery from "$lib/Image_Gallery.svelte";
     let currentTab = "Paintings";
 
     function switchTab(tab) {
@@ -29,6 +30,7 @@
         <div class="image-container">
             <div class="image-column">
                 <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+                <ImageGallery />
             </div>
             <div class="image-column">
                 <img src="/Images/arch.png" alt="Grapes" class="images" />
@@ -42,7 +44,24 @@
             </div>
         </div>
     {:else if currentTab === "Blender"}
-        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+        <div class="image-container">
+            <div class="image-column">
+            <div class="sketchfab-embed-wrapper" style="width: 50%;">
+                <iframe title="Rabbit" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4cf175ddd8d94c7f8705d0d3b9586e6e/embed">
+                </iframe>
+            </div>
+            </div>
+            <div class="image-column">
+                <img src="/Images/arch.png" alt="Grapes" class="images" />
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/painting.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+        </div>
     {:else if currentTab === "Inkscape"}
         <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
     {:else if currentTab === "Ui"}
