@@ -31,52 +31,94 @@
         MY STORY
       </h2>
       <div class="image-container">
+        <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
+        <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate(520%,120%);"> 
+        <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate(650%,200%);"> 
+        <img src="/Images/marker.svg" alt="Marker" class="marker"> 
+        <img src="/Images/marker.svg" alt="Marker" class="marker"> 
+        <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate(520%,920%);"> 
+        <!--
         <ButtonImage
-          style="transform:translate(-40px,30px)"
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           text="I was born on April 25, 2008."
           MarkerText="2008 I was born"
-        />
-        <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
-
+        /> -->
+        <!--
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="90px,-1770px"
           text="I started using prismacolor pencils and produced my first actually good artwork in 2018."
           MarkerText="2018 Pencils"
         />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-20,-10000px"
           text="In 2019, I started learning Blender."
           MarkerText="2019 Blender"
         />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-20,15540px"
           text="In 2020, I started learning Inkscape"
           MarkerText="2020 Inkscape"
-        />      <ButtonImage
+        />
+        <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
         transform="-20,15540px"
         text="In 2021, I started learning acrylics."
         MarkerText="2021 Acrylic Paints"
       />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-30,-190px"
           text="In 2023, I won the regional VFW art contest for the second time."
           MarkerText="2023 VFW Art"
         />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-20px,-190px"
           text="In September of 2023, I started learning web design using HTML and CSS"
           MarkerText="2023 Web Design"
         />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-20,15540px"
           text="In November of 2023, Blender 4.0 was released, and exciting improved version of Blender with many new and improved features!"
           MarkerText="2023 Blender 4.0"
         />
         <ButtonImage
+          style="
+          position: absolute;
+          top: 0;
+          left: 0;"
           transform="-60px,-190px"
           text="In December of 2024, I finished my first oil paintings, and now oil paints are my medium of choice."
           MarkerText="2024 Oil Paints"
-        />
+        /> -->
       </div>
       <br />
       <Button link="/contact" buttonText="CONTACT ME!" buttonColor="--green" />
@@ -113,6 +155,12 @@
     background-image: url(/Images/grapes.jpg);
     background-attachment: fixed;
     background-size: 100%;
+  }
+  .marker{
+    width: 7%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   h1 {
     font-weight: normal;
