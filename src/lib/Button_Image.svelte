@@ -82,6 +82,7 @@
         justify-content: center;
         filter: unset;
         width: 75%;
+        transition: all var(--time) ease;
     }
     .button:hover {
         transform: scale(var(--scale));
@@ -103,12 +104,7 @@
     .image {
         width: 10%;
         height: auto;
-        transition: all var(--time) ease;
         z-index: 500;
-    }
-    .image:hover {
-        transform: scale(var(--scale));
-        filter: brightness(var(--hover-brightness));
     }
     .new-image{
         width: 100%;
