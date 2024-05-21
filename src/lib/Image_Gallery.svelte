@@ -97,7 +97,6 @@
     .image{
         width: 100%;
         height: auto;
-        transition: all var(--time) ease;
         z-index: 500;
         border-radius: var(--radius);
     }

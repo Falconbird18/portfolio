@@ -63,7 +63,22 @@
             </div>
         </div>
     {:else if currentTab === "Inkscape"}
-        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+        <div class="image-container">
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+                <ImageGallery />
+            </div>
+            <div class="image-column">
+                <img src="/Images/arch.png" alt="Grapes" class="images" />
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/painting.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+        </div>
     {:else if currentTab === "Ui"}
         <div class="image-container">
             <div class="image-column">
@@ -81,7 +96,23 @@
             </div>
         </div>
     {:else if currentTab === "Projects"}
-        <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+        <div class="image-container">
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+                <ImageGallery 
+                ImageSource="/Images/supper_froggy.png"/>
+            </div>
+            <div class="image-column">
+                <img src="/Images/arch.png" alt="Grapes" class="images" />
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/painting.jpg" alt="Grapes" class="images" />
+            </div>
+            <div class="image-column">
+                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+            </div>
+        </div>
     {/if}
 </div>
 

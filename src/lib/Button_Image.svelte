@@ -7,7 +7,6 @@
     export let imageSource = "/Images/baby.svg";
     export let imageAlt = "Architecture";
     export let text = "Architecture";
-    export let MarkerText = "2024 Oil Paints";
 
     let isPopupVisible = false;
 
@@ -20,10 +19,7 @@
     on:click={togglePopup}
     class="button"
 >
-    <div class="image">
-        <img src={buttonImageSource} alt={imageAlt} class="new-image"/>
-        <p class="marker-text">{MarkerText}</p>
-    </div>
+        <img src={buttonImageSource} alt={imageAlt} class="image"/>
 </button>
 {#if isPopupVisible}
     <div class="popup" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
@@ -78,15 +74,11 @@
     .button {
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        display: flex;
-        justify-content: center;
         filter: unset;
         width: 75%;
-        transition: all var(--time) ease;
-    }
-    .button:hover {
-        transform: scale(var(--scale));
-        filter: brightness(var(--hover-brightness));
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
     .close {
         background-color: var(--green-hover);
@@ -106,19 +98,12 @@
         height: auto;
         z-index: 500;
     }
-    .new-image{
-        width: 100%;
+    .image:hover {
+        transform: scale(var(--scale));
+        filter: brightness(var(--hover-brightness));
     }
     .image-popup {
         width: 75%;
         height: auto;
-    }
-    .marker-text {
-        font-size: 25px;
-        color: #5e666e;
-        transform: translate(40px, -160px);
-        z-index: 501;
-        max-width: 55%;
-        justify-content: center;
     }
 </style>
