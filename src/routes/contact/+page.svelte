@@ -30,7 +30,7 @@
           Contact Me
         </h2>
         <p>
-          You can contact me through email at austintallent1@gmail.com. I will try to respond as soon as possible.
+          You can contact me through email at austintallent1@gmail.com. I will try to respond as soon as possible. I am also availible for commisions. 
         </p>
         <br />
         <Button

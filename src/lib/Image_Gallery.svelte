@@ -75,6 +75,7 @@
         justify-content: center;
         filter: unset;
         width: 100%;
+        transition: all var(--time) ease;
     }
     .button:hover {
         transform: scale(var(--scale));
@@ -96,13 +97,8 @@
     .image{
         width: 100%;
         height: auto;
-        transition: all var(--time) ease;
         z-index: 500;
         border-radius: var(--radius);
-    }
-    .image:hover {
-        transform: scale(var(--scale));
-        filter: brightness(var(--hover-brightness));
     }
     .image-popup{
         width: 75%;
