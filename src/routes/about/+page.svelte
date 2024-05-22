@@ -32,8 +32,8 @@
       </h2>
       <div class="image-container">
         <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
-        <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate(520%,120%);"> 
-        <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate(650%,200%);"> 
+        <img src="/Images/born.svg" alt="Marker" class="marker" style="transform: translate(520%,120%);"> 
+        <img src="/Images/pencils.png" alt="Marker" class="marker" style="transform: translate(650%,200%);"> 
         <img src="/Images/marker.svg" alt="Marker" class="marker" style="transform: translate();"> 
         <img src="/Images/marker.svg" alt="Marker" class="marker"> 
         <img src="/Images/marker.svg" alt="Marker" class="marker"> 

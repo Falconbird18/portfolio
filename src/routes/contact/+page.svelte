@@ -25,7 +25,7 @@
       </div>
       <div class="about">
         <h2
-          style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;"
+          style="background-color: var(--pale-purple-dark); border-radius: 0px 0px 30px 30px;"
         >
           Contact Me
         </h2>
@@ -36,7 +36,7 @@
         <Button
           link="mailto:austintallent1@gmail.com"
           buttonText="Email me!"
-          buttonColor="--blue"
+          buttonColor="--purple"
         />
       </div>
       <Footer />
@@ -95,8 +95,9 @@
     }
     .about {
       position: relative;
-      background-color: var(--pale-blue-light);
+      background-color: var(--pale-purple-light);
       color: var(--text-blue);
+      padding-bottom: 150px;
     }
   </style>
   
