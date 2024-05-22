@@ -33,10 +33,10 @@
       <div class="image-container">
         <img src="/Images/my-story-background.svg" alt="Austin" class="image" />
         <img src="/Images/born.svg" alt="Marker" class="marker" style="transform: translate(520%,120%);"> 
-        <img src="/Images/pencils.png" alt="Marker" class="marker" style="transform: translate(650%,200%);"> 
-        <img src="/Images/started-blender.png" alt="Marker" class="marker" style="transform: translate();"> 
-        <img src="/Images/inkscape.png" alt="Marker" class="marker"> 
-        <img src="/Images/acrylic-paints.png" alt="Marker" class="marker"> 
+        <img src="/Images/pencils.png" alt="Marker" class="marker" style="transform: translate(720%,230%);"> 
+        <img src="/Images/started-blender.png" alt="Marker" class="marker" style="transform: translate(890%,500%);"> 
+        <img src="/Images/inkscape.png" alt="Marker" class="marker" style="transform: translate(890%,700%);"> 
+        <img src="/Images/acrylic-paints.png" alt="Marker" class="marker" style="transform: translate(700%,450%);"> 
         <img src="/Images/blender-3.png" alt="Marker" class="marker"> 
         <img src="/Images/vfw-contest-first.png" alt="Marker" class="marker"> 
         <img src="/Images/vfw-contest-second.png" alt="Marker" class="marker"> 
