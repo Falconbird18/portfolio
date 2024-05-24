@@ -25,6 +25,10 @@
     .header {
       background-color: var(--pale-blue-light);
       padding: 30px;
+      border-radius: 0px 0px var(--radius) var(--radius);
+      position: absolute;
+      top: 0px;
+      width: 93.3%;
     }
     .header-text {
       display: inline-block;

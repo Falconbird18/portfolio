@@ -38,8 +38,8 @@
           buttonText="Email me!"
           buttonColor="--purple"
         />
+      <Footer style="margin-top: 150px;"/>
       </div>
-      <Footer />
     </body>
   
   <style>
@@ -97,7 +97,6 @@
       position: relative;
       background-color: var(--pale-purple-light);
       color: var(--text-blue);
-      padding-bottom: 150px;
     }
   </style>
   

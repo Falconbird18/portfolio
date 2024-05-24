@@ -35,6 +35,7 @@
     background-color: var(--pale-blue-light);
     padding: 30px;
     text-decoration: none;
+    border-radius: var(--radius) var(--radius) 0px 0px;
   }
   .footer-text {
     font-size: 20px;

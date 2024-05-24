@@ -26,7 +26,7 @@
 
     <div class="about">
       <h2
-        style="background-color: var(--pale-green-dark); border-radius: 0px 0px 30px 30px;"
+        class="rounded-header" style="background-color: var(--pale-green-dark);"
       >
         MY STORY
       </h2>
@@ -35,9 +35,9 @@
         <img src="/Images/born.svg" alt="Marker" class="marker" style="transform: translate(520%,120%);"> 
         <img src="/Images/pencils.png" alt="Marker" class="marker" style="transform: translate(720%,230%);"> 
         <!--COVID-->
-        <img src="/Images/started-blender.png" alt="Marker" class="marker" style="transform: translate(890%,500%);"> 
-        <img src="/Images/inkscape.png" alt="Marker" class="marker" style="transform: translate(890%,700%);"> 
-        <img src="/Images/acrylic-paints.png" alt="Marker" class="marker" style="transform: translate(700%,450%);"> 
+        <img src="/Images/started-blender.png" alt="Marker" class="marker" style="transform: translate(890%,450%);"> 
+        <img src="/Images/inkscape.png" alt="Marker" class="marker" style="transform: translate(830%,700%);"> 
+        <img src="/Images/acrylic-paints.png" alt="Marker" class="marker" style="transform: translate(800%,900%);"> 
         <img src="/Images/blender-3.png" alt="Marker" class="marker"> 
         <img src="/Images/vfw-contest-first.png" alt="Marker" class="marker"> 
         <img src="/Images/vfw-contest-second.png" alt="Marker" class="marker"> 
@@ -129,8 +129,8 @@
       </div>
       <br />
       <Button link="/contact" buttonText="CONTACT ME!" buttonColor="--green" />
-    </div>
     <Footer />
+    </div>
   </div></body
 >
 
@@ -150,6 +150,10 @@
     --time: 0.5s;
     --radius: 30px;
     --hover-brightness: 0.9;
+  }
+  .rounded-header{
+    border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+    transform: translate(0px, -40px)
   }
   body {
     font-family: "Arial", sans-serif;

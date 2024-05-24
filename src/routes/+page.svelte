@@ -16,10 +16,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
-<body>
+<body style="background-color: rgba(255, 255, 255, 0);">
   <div id="overlay">
-    <Header/>
     <div class="intro">
+    <Header/>
       <h1>Hi, I'm Austin Tallent</h1>
       <h2>Artist, CG Geek, and UI Designer</h2>
       <Button
@@ -29,11 +29,7 @@
       />
     </div>
     <div class="about">
-      <h2
-        style="background-color: var(--pale-blue-dark); border-radius: 0px 0px 30px 30px;"
-      >
-        About Me
-      </h2>
+      <h2 class="rounded-header" style="background-color: var(--pale-blue-dark);">About Me</h2>
       <p>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
@@ -97,11 +93,22 @@
           closeButtonText="Close"
           popupText="Popup"
         />
-      </div>
+    </div>
       <Button
-        link="https://calvintallent.me"
+        link="/skills"
         buttonText="more info"
         buttonColor="--purple"
+      />
+    </div>
+<div class="projects">
+  <h2 class="rounded-header" style="background-color: var(--pale-green-dark;">projects</h2>
+  <div class="green">
+    <p>Some of the projects that I have worked on are:</p>
+      <Projects 
+      projectTitle="supper froggy"
+      projectDescription="supper froggy is a full length movie that I a working on."
+      imageSource="/Images/supper_froggy.png"
+      alt="Supper Froggy"
       />
       <Projects 
       projectTitle="supper froggy"
@@ -109,9 +116,11 @@
       imageSource="/Images/supper_froggy.png"
       alt="Supper Froggy"
       />
+  </div>
       <Footer />
-    </div>
-  </div></body
+  </div>
+  </div>
+  </body
 >
 
 <style>
@@ -157,6 +166,10 @@
     padding-bottom: 20px;
     margin: 0px;
     text-transform: uppercase;
+  }
+  .rounded-header{
+    border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+    transform: translate(0px, -40px)
   }
   p {
     text-align: center;
@@ -210,4 +223,12 @@
     text-align: center;
     border-radius: var(--radius);
 }
+  .projects {
+    background-color: var(--pale-green-light);
+  }
+  .green {
+    background-color: var(--pale-green-light);
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
 </style>
