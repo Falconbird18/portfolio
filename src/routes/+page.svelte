@@ -76,7 +76,7 @@
         <Skills
           buttonText="3D ART 95%"
           closeButtonText="close"
-          popupText="I am skilled in Blender"
+          popupText="I have more than five years of experience with Blender, and have developed skills in 3D modeling, texturing, procedural modeling using geometry nodes, proceduarl shading, animation, character modeling, scultping, architectural visulization, and more!"
           width="95%"
         />
 
@@ -93,7 +93,59 @@
           closeButtonText="Close"
           popupText="Popup"
         />
+        <Skills
+          width="70%"
+          buttonText="vector art: 70%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        <Skills
+          width="75%"
+          buttonText="Digital art: 75%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
     </div>
+    <p>I have learned many different software. Some of them are listed below.</p>
+        <div class="progress-container">
+        <Skills
+          width="95%"
+          buttonText="blender: 95%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        <Skills
+          width="85%"
+          buttonText="krita: 85%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        <Skills
+          width="80%"
+          buttonText="inkscape: 80%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        <Skills
+          width="60%"
+          buttonText="gimp: 60%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        <Skills
+          width="50%"
+          buttonText="natron: 50%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+
+        <Skills
+          width="55%"
+          buttonText="kdenlive: 55%"
+          closeButtonText="Close"
+          popupText="Popup"
+        />
+        </div>
       <Button
         link="/skills"
         buttonText="more info"

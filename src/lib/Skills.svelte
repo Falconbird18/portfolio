@@ -22,6 +22,7 @@
     >
 </div>
 {#if isPopupVisible}
+<div class="darken">
     <div class="popup" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
         <div
             class="popup-content"
@@ -39,16 +40,27 @@
             >
         </div>
     </div>
+</div>
 {/if}
 
 <style>
+    .darken{
+        position: fixed;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        z-index: 6;
+    }
     .image-container {
         background-color: var(--pale-purple-light);
         border-radius: 30px;
         padding: 15px;
         width: auto;
     }
-    .button-container {
+    .button-container{
         background-color: var(--purple);
         border-radius: 30px;
         margin-top: 30px;
@@ -56,11 +68,6 @@
     }
     .popup {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 50%;
-        background: rgba(0, 0, 0, 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -69,6 +76,7 @@
         padding-top: 15%;
         padding-bottom: 15%;
         z-index: 5;
+        transform: scale(0.75,0.75);
     }
 
     .popup-content {
@@ -78,6 +86,7 @@
         color: white;
     }
     .button {
+        text-transform: uppercase;
         background-color: var(--purple);
         border: none;
         border-radius: 30px;
@@ -88,7 +97,7 @@
         justify-content: center;
         font-size: 16px;
         line-height: 24px;
-        filter: unset;
+        filter: none;
         z-index: 4;
     }
     .button:hover {
