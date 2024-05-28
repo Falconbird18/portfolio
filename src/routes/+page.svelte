@@ -16,7 +16,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
-<body style="background-color: rgba(255, 255, 255, 0);">
+<body style="background-color: rgba(255, 255, 255, 0); margin: 0px;">
   <div id="overlay">
     <div class="intro">
     <Header/>
@@ -199,7 +199,7 @@
   .intro {
     color: white;
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 25%;
     background-image: url(/Images/painting.jpg);
     background-attachment: fixed;
     background-size: 100%;

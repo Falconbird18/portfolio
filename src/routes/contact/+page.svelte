@@ -16,7 +16,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </svelte:head>
-  <body>
+<body style="margin: 0px;">
     <div id="overlay">
         <Header />
       <div class="intro">
@@ -25,7 +25,7 @@
       </div>
       <div class="about">
         <h2
-          style="background-color: var(--pale-purple-dark); border-radius: 0px 0px 30px 30px;"
+          class="rounded-header" style="background-color: var(--pale-purple-dark);"
         >
           Contact Me
         </h2>
@@ -63,10 +63,14 @@
       font-family: "Arial", sans-serif;
       text-align: center;
     }
+    .rounded-header{
+    border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+    transform: translate(0px, -40px)
+  }
     .intro {
       color: white;
       padding-top: 150px;
-      padding-bottom: 150px;
+      padding-bottom: 36%;
       background-image: url(/Images/painting.jpg);
       background-attachment: fixed;
       background-size: 100%;

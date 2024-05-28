@@ -27,6 +27,7 @@
 
 <div class="tab-content">
     {#if currentTab === "Paintings"}
+        <h3>Paintings</h3>
         <div class="image-container">
             <div class="image-column">
                 <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
@@ -160,7 +161,6 @@
     .images {
         width: 100%;
         height: 100%;
-        margin: 10px;
         border-radius: var(--radius);
     }
     .image-container {
@@ -170,6 +170,9 @@
         width: 75%;
         margin: 0 auto;
         align-items: flex-start;
+        padding-top: 150px;
+        background-color: var(--pale-blue-dark);
+        border-radius: var(--radius);
     }
     .image-column {
         display: flex;
@@ -177,6 +180,5 @@
         width: 23%;
         margin-left: 1%;
         margin-right: 1%;
-        gap: 10px;
     }
 </style>

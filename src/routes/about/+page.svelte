@@ -17,7 +17,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
-<body>
+<body style="margin: 0px;">
   <div id="overlay">
     <Header />
     <div class="intro">
@@ -162,7 +162,7 @@
   .intro {
     color: white;
     padding-top: 150px;
-    padding-bottom: 500px;
+    padding-bottom: 36%;
     background-image: url(/Images/grapes.jpg);
     background-attachment: fixed;
     background-size: 100%;

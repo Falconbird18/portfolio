@@ -17,7 +17,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </svelte:head>
-  <body>
+<body style="margin: 0px;">
     <div id="overlay">
         <Header />
       <div class="intro">
@@ -25,6 +25,11 @@
         <!--Use cat picture from the nine for the header background image.-->
       </div>
       <div class="about">
+      <h2
+        class="rounded-header" style="background-color: var(--pale-green-dark);"
+      >
+        SKILLS
+      </h2>
         <div class="gallery-padding">
 
         <Gallery />
@@ -50,6 +55,10 @@
       --radius: 30px;
       --hover-brightness: 0.9;
     }
+      .rounded-header{
+    border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+    transform: translate(0px, -40px)
+  }
     body {
       font-family: "Arial", sans-serif;
       text-align: center;
@@ -57,7 +66,7 @@
     .intro {
       color: white;
       padding-top: 150px;
-      padding-bottom: 150px;
+      padding-bottom: 36%;
       background-image: url(/Images/painting.jpg);
       background-attachment: fixed;
       background-size: 100%;
@@ -88,7 +97,6 @@
       position: relative;
       background-color: var(--pale-green-light);
       color: var(--text-blue);
-      padding-top: 100px;
     }
     .gallery-padding{
         padding: 15px;
