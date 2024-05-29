@@ -30,7 +30,7 @@
         <h3>Paintings</h3>
         <div class="image-container">
             <div class="image-column">
-                <img src="/Images/grapes.jpg" alt="Grapes" class="images" />
+                <ImageGallery />
                 <ImageGallery />
             </div>
             <div class="image-column">

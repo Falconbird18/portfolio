@@ -80,6 +80,7 @@
     .button:hover {
         transform: scale(var(--scale));
         filter: brightness(var(--hover-brightness));
+        z-index: 1003;
     }
     .close {
         background-color: var(--green-hover);

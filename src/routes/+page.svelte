@@ -40,7 +40,7 @@
         explicabo.
       </p>
       <div class="image-container">
-      <img src="/Images/portfolio.png" alt="Austin" class="image" />
+      <img src="/Images/painting.jpg" alt="Austin" class="image" />
       </div>
       <br />
       <Button
