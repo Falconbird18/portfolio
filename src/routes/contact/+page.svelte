@@ -102,5 +102,10 @@
       background-color: var(--pale-purple-light);
       color: var(--text-blue);
     }
+    @media only screen and (max-width: 768px) {
+    p {
+      width: 75%;
+    }
+}
   </style>
   

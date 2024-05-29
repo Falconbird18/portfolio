@@ -198,8 +198,8 @@
   }
   .intro {
     color: white;
-    padding-top: 150px;
-    padding-bottom: 25%;
+    padding-top: 10%;
+    padding-bottom: 20%;
     background-image: url(/Images/painting.jpg);
     background-attachment: fixed;
     background-size: 100%;
@@ -283,4 +283,15 @@
     padding-top: 20px;
     padding-bottom: 50px;
   }
+  @media only screen and (max-width: 768px) {
+    p {
+      width: 75%;
+    }
+    .progress-container {
+      width: 75%;
+    }
+    .image-container {
+      width: 50%;
+    }
+}
 </style>

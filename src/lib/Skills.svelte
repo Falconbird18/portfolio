@@ -61,22 +61,20 @@
         width: auto;
     }
     .button-container{
-        background-color: var(--purple);
+        background-color: #9e57e5;
         border-radius: 30px;
         margin-top: 30px;
-        filter: brightness(var(--hover-brightness));
     }
     .popup {
         position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 25%;
-        padding-right: 25%;
-        padding-top: 15%;
-        padding-bottom: 15%;
+        width: 50%;
+        height: 50%;
+        top: 25%;
+        left: 25%;
         z-index: 5;
-        transform: scale(0.75,0.75);
     }
 
     .popup-content {

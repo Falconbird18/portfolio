@@ -1,4 +1,5 @@
 <header class="header">
+  <a href="/" class="header-text">HOME</a>
   <a href="/about" class="header-text">ABOUT</a>
   <a href="/skills" class="header-text">SKILLS</a>
   <a href="/portfolio" class="header-text">PORTFOLIO</a>

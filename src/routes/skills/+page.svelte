@@ -26,16 +26,14 @@
       </div>
       <div class="about">
       <h2
-        class="rounded-header" style="background-color: var(--pale-green-dark);"
+        class="rounded-header" style="background-color: var(--pale-yellow-dark);"
       >
         SKILLS
       </h2>
-        <div class="gallery-padding">
 
         <Gallery />
-        </div>
-      </div>
       <Footer />
+      </div>
     </body>
   
   <style>
@@ -48,8 +46,11 @@
       --purple: #b061ff;
       --pale-purple-dark: #c29ee6;
       --green: #61ffa5;
-      --pale-green-light: #d6ffe8;
+      --pale-green-light: #FFFAD6;
       --pale-green-dark: #c1e6d1;
+      --pale-yellow-light: #fffad6;
+      --pale-yellow-dark: #e6e1c1;
+      --yellow: #FFEA61;
       --scale: 1.25;
       --time: 0.5s;
       --radius: 30px;
@@ -95,12 +96,7 @@
     }
     .about {
       position: relative;
-      background-color: var(--pale-green-light);
+      background-color: var(--pale-yellow-light);
       color: var(--text-blue);
-    }
-    .gallery-padding{
-        padding: 15px;
-        border-radius: var(--radius);
-        background-color: var(--pale-green-dark);
     }
   </style>

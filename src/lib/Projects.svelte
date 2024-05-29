@@ -32,4 +32,9 @@
     height: auto;
     border-radius: var(--radius);
   }
+  @media only screen and (max-width: 768px) {
+    .project-containers {
+      width: 75%;
+    }
+}
 </style>

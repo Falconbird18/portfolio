@@ -22,7 +22,6 @@
     .images {
         width: 100%;
         height: 100%;
-        margin: 10px;
         border-radius: var(--radius);
     }
     .image-container {
@@ -32,6 +31,9 @@
         width: 75%;
         margin: 0 auto;
         align-items: flex-start;
+        padding-top: 150px;
+        background-color: var(--pale-yellow-dark);
+        border-radius: var(--radius);
     }
     .image-column {
         display: flex;

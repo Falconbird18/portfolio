@@ -31,8 +31,8 @@
         GALLERY
       </h2>
         <Gallery />
-      </div>
       <Footer />
+      </div>
     </body>
   
   <style>
