@@ -18,6 +18,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@colorfuldots/svelteit": "^1.0.0-alpha.7"
+		"@colorfuldots/svelteit": "^1.0.0-alpha.7",
+		"bootstrap": "^5.3.3",
+		"hamburger-menu-svelte": "^2.2.0"
 	}
 }
