@@ -31,13 +31,7 @@
     <div class="about">
       <h2 class="rounded-header" style="background-color: var(--pale-blue-dark);">About Me</h2>
       <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Sed ut perspi unde omnis iste natus error sit voluptatem accusantium
-        doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo
-        inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo.
+        I love painting, Blender, and other types of art (except modern art!) 
       </p>
       <div class="image-container">
       <img src="/Images/painting.jpg" alt="Austin" class="image" />
@@ -45,7 +39,7 @@
       <br />
       <Button
         link="/about"
-        buttonText="tell me more!"
+        buttonText="tell me more"
         buttonColor="--blue"
       />
     </div>
@@ -76,14 +70,14 @@
         <Skills
           buttonText="3D ART 95%"
           closeButtonText="close"
-          popupText="I have more than five years of experience with Blender, and have developed skills in 3D modeling, texturing, procedural modeling using geometry nodes, proceduarl shading, animation, character modeling, scultping, architectural visulization, and more!"
+          popupText="I have more than five years of experience with 3D, and have worked on several big projects."
           width="95%"
         />
 
         <Skills
           buttonText="PAINTING 75%"
           closeButtonText="close"
-          popupText="I am skilled in painting"
+          popupText="I paint with oils, and am inspired by the old masters, such as the hudson river school, and Rembrandt."
           width="75%"
         />
 
@@ -91,19 +85,19 @@
           width="90%"
           buttonText="Drawing: 90%"
           closeButtonText="Close"
-          popupText="Popup"
+          popupText="I like drawing, "
         />
         <Skills
           width="70%"
           buttonText="vector art: 70%"
           closeButtonText="Close"
-          popupText="Popup"
+          popupText="Unlike some vector art, my vector art is shaded, and I try to create depth and imersion."
         />
         <Skills
           width="75%"
           buttonText="Digital art: 75%"
           closeButtonText="Close"
-          popupText="Popup"
+          popupText="I like drawing digitally "
         />
     </div>
     <p>I have learned many different software. Some of them are listed below.</p>
@@ -112,7 +106,7 @@
           width="95%"
           buttonText="blender: 95%"
           closeButtonText="Close"
-          popupText="Popup"
+          popupText="I have used Blender for more than 5 years, and can do almost anything in the program. My skills include modeling, texturing, lighting, architectuarl visulization, and more!"
         />
         <Skills
           width="85%"
@@ -136,7 +130,7 @@
           width="50%"
           buttonText="natron: 50%"
           closeButtonText="Close"
-          popupText="Popup"
+          popupText="I use Natron (Similar to Nuke or After Effects) for my compositing, and enjoy the node-based workflow. I also do some compositing in Blender."
         />
 
         <Skills
@@ -158,16 +152,37 @@
     <p>Some of the projects that I have worked on are:</p>
       <Projects 
       projectTitle="supper froggy"
-      projectDescription="supper froggy is a full length movie that I a working on."
+      projectDescription="Supper Froggy is a full length movie in development. Currently, I have completed about a minute and a half of footage, created in Blender."
       imageSource="/Images/supper_froggy.png"
       alt="Supper Froggy"
       />
       <Projects 
-      projectTitle="supper froggy"
-      projectDescription="supper froggy is a full length movie that I a working on."
+      projectTitle="my house"
+      projectDescription="I have been working on a 3D version of my house. It is about fifty percent complete."
       imageSource="/Images/supper_froggy.png"
-      alt="Supper Froggy"
+      alt="My house"
       />
+      <Projects 
+      projectTitle="737 max project"
+      projectDescription="I have just started working on a 737 MAX for FlightGear"
+      imageSource="/Images/supper_froggy.png"
+      alt="737 MAX cockpit"
+      />
+      <Button
+        link="/skills"
+        buttonText="view all projects"
+        buttonColor="--green"
+      />
+  </div>
+  <div class="yellow">
+  <h2 class="rounded-header" style="background-color: var(--pale-yellow-dark;">software</h2>
+  <p>The links to the software I use are listed below.</p>
+  <a href="">Blender</a>
+  <a href="">Inkscape</a>
+  <a href="">GIMP</a>
+  <a href="">Krita</a>
+  <a href="">Kdenlive</a>
+  <a href="">Natron</a>
   </div>
       <Footer />
   </div>
@@ -191,6 +206,9 @@
     --time: 0.5s;
     --radius: 30px;
     --hover-brightness: 0.9;
+      --pale-yellow-light: #fffad6;
+      --pale-yellow-dark: #e6e1c1;
+      --yellow: #FFEA61;
   }
   body {
     font-family: "Arial", sans-serif;
@@ -203,6 +221,9 @@
     background-image: url(/Images/painting.jpg);
     background-attachment: fixed;
     background-size: 100%;
+  }
+  .yellow{
+    background-color: var(--pale-yellow-light);
   }
   h1 {
     font-weight: normal;

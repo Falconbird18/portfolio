@@ -46,7 +46,7 @@
       --purple: #b061ff;
       --pale-purple-dark: #c29ee6;
       --green: #61ffa5;
-      --pale-green-light: #FFFAD6;
+      --pale-green-light: #d6ffe8;
       --pale-green-dark: #c1e6d1;
       --pale-yellow-light: #fffad6;
       --pale-yellow-dark: #e6e1c1;
